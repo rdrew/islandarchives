@@ -1,0 +1,14 @@
+{
+  "name": "islandarchives",
+  "description": "theming tools for upei_vre themes",
+  "main": "",
+  "authors": [
+    "rdrew <robdrewupei@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rdrew/islandarchives",
+  "private": true,
+  "dependencies": {
+    "bourbon": "^4.2.7"
+  }
+}
