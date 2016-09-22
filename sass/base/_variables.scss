@@ -1,10 +1,13 @@
+//font imports
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);
 // Breakpoints
 $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: $font-stack-system;
-$heading-font-family: $base-font-family;
+$base-font-family: $font-stack-helvetica;
+//$heading-font-family: $base-font-family;
+$heading-font-family: $font-stack-georgia;
 
 // Font Sizes
 $base-font-size: 1em;
