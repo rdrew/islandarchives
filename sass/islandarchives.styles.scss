@@ -1,12 +1,13 @@
 // Import Bourbon.
-@import "../libraries/bourbon/app/assets/stylesheets/bourbon";
+@import "../libraries/bourbon/core/bourbon";
 
 // Import Bitters.
 @import "base/base";
 
 // Import Neat.
-//@import "../../neato/bower_components/neat/app/assets/stylesheets/neat";
-//@import "../../neato/bower_components/neat/app/assets/stylesheets/neat-helpers";
+@import "../libraries/neat/app/assets/stylesheets/neat";
+@import "../libraries/neat/app/assets/stylesheets/neat-helpers";
+
 
 
 

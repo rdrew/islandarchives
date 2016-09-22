@@ -9,7 +9,6 @@
   "homepage": "https://github.com/rdrew/islandarchives",
   "private": true,
   "dependencies": {
-    "bourbon": "^4.2.7",
     "bitters": "^1.4.0",
     "neat": "^1.8.0"
   }
