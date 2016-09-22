@@ -10,6 +10,7 @@ core = 7.x
 ; ========================================
 stylesheets[all][] = css/islandarchives.reset.css
 stylesheets[all][] = css/islandarchives.styles.css
+stylesheets[all][] = css/crap_im_not_proud_of.styles.css
 
 ; ========================================
 ; Scripts
