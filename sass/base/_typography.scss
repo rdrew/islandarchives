@@ -3,7 +3,8 @@
 
 body {
 	color: $base-font-color;
-	font-family: $base-font-family;
+	//font-family: $base-font-family;
+	font-family: et-book;
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 }
@@ -18,6 +19,7 @@ h6 {
 	font-size: modular-scale(1);
 	line-height: $heading-line-height;
 	margin: 0 0 $small-spacing;
+	font-family: et-book;
 }
 
 p {
