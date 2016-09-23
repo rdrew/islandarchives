@@ -308,49 +308,8 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.tabs {
-  line-height: 1.5;
-  padding: 0;
-  border-bottom: 1px solid #ddd; }
-  .tabs::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .tabs li {
-    list-style: none; }
-    @media screen and (min-width: 600px) {
-      .tabs li {
-        display: inline; } }
-  .tabs li a {
-    background-color: #fffff8;
-    border-top: 1px solid #ddd;
-    color: #333;
-    display: block;
-    padding: 0.75em 1.618em;
-    text-decoration: none; }
-    @media screen and (min-width: 600px) {
-      .tabs li a {
-        border-top: 0;
-        display: inline-block; } }
-    .tabs li a:hover {
-      color: #1565c0; }
-    .tabs li a:focus {
-      outline: none; }
-    .tabs li a.active {
-      border-bottom: 0; }
-      @media screen and (min-width: 600px) {
-        .tabs li a.active {
-          border: 1px solid #ddd;
-          border-bottom-color: #fffff8;
-          margin-bottom: -1px; } }
-  .tabs .tab-content {
-    display: none;
-    padding: 1.5em 1.618em;
-    width: 100%; }
-    @media screen and (min-width: 600px) {
-      .tabs .tab-content {
-        border-top: 1px solid #ddd;
-        float: left; } }
+.tabs li {
+  display: inline-block; }
 
 ul.pager li {
   background: #f7f7f7;
@@ -397,6 +356,9 @@ form.search-block-form {
     form.search-block-form input[type=submit] img {
       height: 12px;
       opacity: 0.7; }
+
+.breadcrumb {
+  display: none; }
 
 body {
   /*background: blue  !important;*/ }
