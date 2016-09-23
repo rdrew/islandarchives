@@ -1,5 +1,5 @@
 //font imports
-/*
+/*// {{{
  *this is copies from tufte.css font set (et-book)
  */
 
@@ -28,7 +28,7 @@
 	font-weight: bold;
 	font-style: normal
 }
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);// }}}
 
 
 // Breakpoints
@@ -36,9 +36,9 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: $font-stack-helvetica;
-//$heading-font-family: $base-font-family;
-$heading-font-family: $font-stack-georgia;
+$base-font-family: et-book;
+$heading-font-family: $base-font-family;
+//$heading-font-family: $font-stack-georgia;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -68,7 +68,7 @@ $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: #fffff8;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms

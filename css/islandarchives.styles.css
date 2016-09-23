@@ -1,4 +1,4 @@
-/*
+/*// {{{
  *this is copies from tufte.css font set (et-book)
  */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);
@@ -33,7 +33,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: et-book;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -77,14 +77,14 @@ input,
 select,
 textarea {
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: et-book;
   font-size: 1em; }
 
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #fff;
+  background-color: #fffff8;
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -100,7 +100,7 @@ textarea {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(18, 89, 169, 0.7);
     outline: none; }
   [type='color']:disabled, [type='date']:disabled, [type='datetime']:disabled, [type='datetime-local']:disabled, [type='email']:disabled, [type='month']:disabled, [type='number']:disabled, [type='password']:disabled, [type='search']:disabled, [type='tel']:disabled, [type='text']:disabled, [type='time']:disabled, [type='url']:disabled, [type='week']:disabled, input:not([type]):disabled, textarea:disabled {
-    background-color: #f2f2f2;
+    background-color: #f2f2ec;
     cursor: not-allowed; }
     [type='color']:disabled:hover, [type='date']:disabled:hover, [type='datetime']:disabled:hover, [type='datetime-local']:disabled:hover, [type='email']:disabled:hover, [type='month']:disabled:hover, [type='number']:disabled:hover, [type='password']:disabled:hover, [type='search']:disabled:hover, [type='tel']:disabled:hover, [type='text']:disabled:hover, [type='time']:disabled:hover, [type='url']:disabled:hover, [type='week']:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover {
       border: 1px solid #ddd; }
@@ -140,6 +140,9 @@ html {
 html,
 body {
   height: 100%; }
+
+body {
+  padding-top: 1.5em; }
 
 ul,
 ol {
@@ -192,11 +195,14 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+html {
+  font-size: 15px; }
+
 body {
   color: #333;
   font-family: et-book;
-  font-size: 1em;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background: #fffff8; }
 
 h1, .site-branding__name,
 h2,
@@ -204,14 +210,51 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Georgia", "Times", "Times New Roman", serif;
+  font-family: et-book;
   font-size: 1.25em;
   line-height: 1.2;
-  margin: 0 0 0.75em;
-  font-family: et-book; }
+  margin: 0 0 0.75em; }
+
+h1, .site-branding__name {
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  font-size: 3.2rem;
+  line-height: 1; }
+
+h2 {
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 2.1rem;
+  margin-bottom: 0;
+  font-size: 2.2rem;
+  line-height: 1; }
+
+h3 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  line-height: 1; }
 
 p {
   margin: 0 0 0.75em; }
+
+p, ol, ul {
+  font-size: 1.4rem; }
+
+p {
+  line-height: 2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  padding-right: 0;
+  vertical-align: baseline; }
+
+code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1.0rem;
+  line-height: 1.42; }
 
 a {
   color: #1565c0;
@@ -227,116 +270,38 @@ hr {
   border-top: 0;
   margin: 1.5em 0; }
 
+/* Links: replicate underline that clears descenders */
+.l-page a:link, .l-page a:visited {
+  color: inherit; }
+
+.l-page a:link {
+  text-decoration: none;
+  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+  background-position: 0% 93%, 100% 93%, 0% 93%; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .l-page a:link {
+    background-position-y: 87%, 87%, 87%; } }
+
+.l-page a:link::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+.l-page a:link::selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+.l-page a:link::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+/* Sidenotes, margin notes, figures, captions */
 /*
  *copied from refills
  */
-h1, .site-branding__name, h2, h3, p {
-  margin: 0; }
-
-hr {
-  border-bottom: 1px solid #ddd;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: 1.5em 0; }
-
-p {
-  color: #333;
-  line-height: 1.5; }
-
-a {
-  color: #1565c0;
-  text-decoration: none; }
-
-.type {
-  border-bottom: 2px solid;
-  display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 0.7em;
-  font-weight: 800;
-  margin-bottom: 2em;
-  padding: 0.1em 0;
-  text-align: left;
-  text-transform: uppercase; }
-
-h1, .site-branding__name {
-  font-family: "Georgia", "Times", "Times New Roman", serif;
-  font-size: 1.9em;
-  margin-bottom: 0.3em; }
-  @media screen and (min-width: 600px) {
-    h1, .site-branding__name {
-      font-size: 2.6em; } }
-
-h2 {
-  font-family: "Georgia", "Times", "Times New Roman", serif;
-  font-size: 1.3em;
-  font-weight: 400;
-  line-height: 1.25em;
-  margin-bottom: 0.9em; }
-  @media screen and (min-width: 600px) {
-    h2 {
-      font-size: 1.5em; } }
-
-code {
-  background: #F7F7F7;
-  border-radius: 4.5px;
-  border: 1px solid #E0E0E0;
-  font-size: 0.75em;
-  font-style: normal;
-  padding: 0.1em 0.4em;
-  white-space: nowrap; }
-
-h2 code {
-  font-size: 0.65em; }
-
-h3 {
-  font-family: "Georgia", "Times", "Times New Roman", serif;
-  font-size: 1.4em;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.3em;
-  margin-bottom: 0.4em; }
-
-p.date {
-  color: rgba(51, 51, 51, 0.4);
-  font-family: "Georgia", "Times", "Times New Roman", serif;
-  font-style: italic;
-  margin-bottom: 0.3em; }
-
-p {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  letter-spacing: 1;
-  line-height: 1.55em;
-  margin-bottom: 1.5em; }
-  p span {
-    font-family: "Georgia", "Times", "Times New Roman", serif;
-    font-size: 1.2em;
-    font-style: italic; }
-
-a.read-more {
-  display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 0.8em;
-  font-weight: 700;
-  margin-left: 0.2em;
-  position: relative;
-  text-transform: uppercase; }
-  a.read-more span {
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 1.5em;
-    font-style: normal;
-    position: absolute;
-    right: -12px;
-    top: -1px; }
-
-hr {
-  width: 3em; }
-
-p.author {
-  font-family: "Georgia", "Times", "Times New Roman", serif;
-  font-size: 1.2em;
-  font-style: italic; }
-
 html {
   box-sizing: border-box; }
 
@@ -357,7 +322,7 @@ html {
       .tabs li {
         display: inline; } }
   .tabs li a {
-    background-color: #fff;
+    background-color: #fffff8;
     border-top: 1px solid #ddd;
     color: #333;
     display: block;
@@ -376,7 +341,7 @@ html {
       @media screen and (min-width: 600px) {
         .tabs li a.active {
           border: 1px solid #ddd;
-          border-bottom-color: #fff;
+          border-bottom-color: #fffff8;
           margin-bottom: -1px; } }
   .tabs .tab-content {
     display: none;
