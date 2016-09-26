@@ -144,6 +144,147 @@ body {
 body {
   padding-top: 1.5em; }
 
+/*******************************************************************************
+ * hero.layout.scss
+ *
+ * Styles for the Hero layout.
+ ******************************************************************************/
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.l-constrained, .l-region--highlighted, .l-region--footer {
+  width: 95%;
+  margin: 0 auto; }
+  .l-constrained::after, .l-region--highlighted::after, .l-region--footer::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+/* Header */
+.l-region--header {
+  padding: 1.5em 0; }
+  .l-region--header .block {
+    float: right; }
+
+/* Content Area */
+.l-highlighted-wrapper {
+  padding: 1.5em 0; }
+
+.l-region--help {
+  margin-bottom: 1.5em; }
+
+.l-main {
+  margin-top: 3em;
+  margin-bottom: 3em; }
+
+/* Sidebars */
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  padding: 1.5em; }
+
+/* Footer */
+.l-footer-wrapper {
+  padding: 1.5em 0; }
+
+@media screen and (min-width: 600px) {
+  .l-constrained, .l-region--highlighted, .l-region--footer {
+    width: 90%; }
+  /* Header */
+  .l-branding {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .l-branding:last-child {
+      margin-right: 0; }
+  .l-region--navigation {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .l-region--navigation:last-child {
+      margin-right: 0; }
+  .l-region--header {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-right: 0; }
+    .l-region--header:last-child {
+      margin-right: 0; }
+  /* Sidebars */
+  .has-two-sidebars .l-content,
+  .has-one-sidebar .l-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .has-two-sidebars .l-content:last-child,
+    .has-one-sidebar .l-content:last-child {
+      margin-right: 0; }
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second,
+  .has-one-sidebar .l-region--sidebar-first,
+  .has-one-sidebar .l-region--sidebar-second {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    clear: right; }
+    .has-two-sidebars .l-region--sidebar-first:last-child,
+    .has-two-sidebars .l-region--sidebar-second:last-child,
+    .has-one-sidebar .l-region--sidebar-first:last-child,
+    .has-one-sidebar .l-region--sidebar-second:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 900px) {
+  .l-constrained, .l-region--highlighted, .l-region--footer {
+    width: 80%; }
+  /* Sidebars */
+  .has-one-sidebar .l-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .has-one-sidebar .l-content:last-child {
+      margin-right: 0; }
+  .has-one-sidebar .l-region--sidebar-first {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-right: 0;
+    clear: none; }
+    .has-one-sidebar .l-region--sidebar-first:last-child {
+      margin-right: 0; }
+  .has-two-sidebars .l-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .has-two-sidebars .l-content:last-child {
+      margin-right: 0; }
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    clear: none; }
+    .has-two-sidebars .l-region--sidebar-first:last-child,
+    .has-two-sidebars .l-region--sidebar-second:last-child {
+      margin-right: 0; }
+  .has-two-sidebars .l-region--sidebar-second {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .has-two-sidebars .l-region--sidebar-second:last-child {
+      margin-right: 0; } }
+
 ul,
 ol {
   list-style-type: none;

@@ -27,6 +27,7 @@ gulp.task('sass:dev', function () {
 
 gulp.task('sass:watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass:dev']);
+  gulp.watch('./sass/**/**/*.scss', ['sass:dev']);
 });
 
 gulp.task('default', ['sass:dev', 'sass:watch']);
