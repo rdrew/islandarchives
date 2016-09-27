@@ -1,10 +1,63 @@
 <div<?php print $attributes; ?>>
+<!--bourbon refills header-->
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <!--<a href="javascript:void(0)" class="logo">-->
+      <!--<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo Image">-->
+    <!--</a>-->
+
+        <?php if ($logo): ?>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo site-branding__logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+        <?php endif; ?>
+
+	<a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><a href="javascript:void(0)">Home</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+        <li id="js-navigation-more" class="nav-link more"><a href="javascript:void(0)">More</a>
+          <ul class="submenu">
+            <li><a href="javascript:void(0)">Submenu Item</a></li>
+            <li><a href="javascript:void(0)">Another Item</a></li>
+            <li class="more"><a href="javascript:void(0)">Item with submenu</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
+                <li><a href="javascript:void(0)">Another Item</a></li>
+              </ul>
+            </li>
+            <li class="more"><a href="javascript:void(0)">Another submenu</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">Sub-submenu</a></li>
+                <li><a href="javascript:void(0)">An Item</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="navigation-tools">
+      <div class="search-bar">
+        <form role="search">
+          <input type="search" placeholder="Enter Search" />
+          <button type="submit">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!--end of pasted header-->
   <header class="l-header" role="banner">
     <div class="l-constrained">
       <div class="l-branding site-branding">
-        <?php if ($logo): ?>
+
+<!--        <?php if ($logo): ?>
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-branding__logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
         <?php endif; ?>
+-->
         <?php if ($site_name): ?>
           <a href="<?php print $front_page; ?>" class="site-branding__name" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
         <?php endif; ?>
@@ -62,7 +115,12 @@
 
 <footer class="footer-2" role="contentinfo">
   <div class="footer-logo">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image">
+
+
+        <?php if ($logo): ?>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-branding__logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+        <?php endif; ?>
+
   </div>
     <ul>
       <li><a href="javascript:void(0)">About</a></li>
