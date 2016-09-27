@@ -41,7 +41,10 @@ body {
 
 	@include clearfix;
 }
-
+.l-region--navigation nav {
+	@extend .l-constrained;
+	
+}
 /* Header */
 .l-region--header {
 	padding: $base-spacing 0;
@@ -91,15 +94,15 @@ body {
 
 	/* Header */
 	.l-branding {
-		@include span-columns(3);
-	}
-
-	.l-region--navigation {
 		@include span-columns(6);
 	}
 
+	//.l-region--navigation {
+		//@include span-columns(6);
+	//}
+
 	.l-region--header {
-		@include span-columns(3);
+		@include span-columns(6);
 
 		@include omega;
 	}
