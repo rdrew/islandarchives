@@ -25,8 +25,12 @@ body {
 }
 
 .site-branding__logo {
-	display: none ;
+	//display: none ;
 	
+}
+.footer-2 .footer-logo img {
+	width: 107px;
+	height: auto;
 }
 .site-branding__name {
 	@extend h1;
