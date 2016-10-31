@@ -1,6 +1,6 @@
 <div<?php print $attributes; ?>>
 
-  <header class="l-header" role="banner">
+  <header class="l-header l-constrained" role="banner">
 
 
 
