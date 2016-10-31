@@ -14,7 +14,7 @@ body {
 }
 
 .l-header {
-	padding-top: $base-spacing;
+	//padding-top: $base-spacing;
 }
 //body {
 	//padding-top: $base-spacing;
@@ -41,13 +41,14 @@ body {
 
 	@include clearfix;
 }
-.l-region--navigation nav {
-
-	//@extend .l-constrained;
+.l-region--navigation { 
 	margin-bottom: 1em;
-	
-}
-/* Header */
+	@extend .l-constrained;
+	nav {
+
+
+	}
+}/* Header */
 .l-region--header {
 	padding: $base-spacing 0;
 
