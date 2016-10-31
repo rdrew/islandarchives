@@ -98,7 +98,7 @@ hr {
 
 /* Links: replicate underline that clears descenders */
 //.l-page {
-.l-region--navigation, .l-header, .l-main {
+.l-region--navigation, /*.l-header, */.l-main {
 	a:link, a:visited {
 		color: inherit;
 	}

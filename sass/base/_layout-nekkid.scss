@@ -42,7 +42,9 @@ body {
 	@include clearfix;
 }
 .l-region--navigation nav {
-	@extend .l-constrained;
+
+	//@extend .l-constrained;
+	margin-bottom: 1em;
 	
 }
 /* Header */

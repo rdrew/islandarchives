@@ -1,0 +1,16 @@
+.site-branding__logo {
+	img {
+		width: 60px;	
+	}
+	float: left;
+	margin-right: 1em;
+		
+}
+.site-branding__name {
+	//margin-bottom: 1em;
+color: $base-font-color; 
+}
+
+.site-branding__slogan {
+	margin: 0;
+}
