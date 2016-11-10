@@ -437,6 +437,12 @@ hr {
 /*
  *copied from refills
  */
+.page-islandora-object h1, .page-islandora-object .site-branding__name {
+  margin: 1rem 0; }
+
+.page-islandora-object .breadcrumb {
+  margin-bottom: 1rem; }
+
 html {
   box-sizing: border-box; }
 
