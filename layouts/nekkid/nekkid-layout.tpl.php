@@ -35,11 +35,11 @@
   <?php endif; ?>
 
   <div class="l-main l-constrained">
-	<a id="main-content"></a>
-	<?php print render($tabs); ?>
 	<?php print $breadcrumb; ?>
+	<a id="main-content"></a>
 	<?php print $messages; ?>
 	<?php print render($page['help']); ?>
+	<?php print render($tabs); ?>
 
 	<div class="l-content" role="main">
 	  <?php print render($title_prefix); ?>

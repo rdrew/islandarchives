@@ -45,3 +45,12 @@ function islandarchives_css_alter(&$css) {
 
   $css = array_diff_key($css, $exclude);
 }
+
+function islandarchives_preprocess_islandora_basic_collection_wrapper(&$variables) {
+	//$variables['view_links'][0]['title'] = '<i class="fa fa-th" aria-hidden="true"></i>
+		//Grid';
+	//$variables['view_links'][1]['title'] = 'List';
+	//dpm($variables);
+
+
+}
