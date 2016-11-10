@@ -98,7 +98,9 @@ hr {
 
 /* Links: replicate underline that clears descenders */
 //.l-page {
-/*.l-region--navigation, .l-header,*/ .l-main {
+/*.l-region--navigation, .l-header,*/
+
+.l-main {
 	a:link, a:visited {
 		color: inherit;
 	}
@@ -132,6 +134,19 @@ hr {
 	}
 }
 
+.normal_link {
+	text-decoration: initial;
+	background: initial;
+	background-size: initial;
+	background-repeat: initial;
+	text-shadow: initial;
+	background-position: initial;
+}
+.l-main a.contextual-links-trigger:link,
+.l-main ul.contextual-links a:link {
+	@extend .normal_link;
+	
+}
 /* Sidenotes, margin notes, figures, captions */
 /*
  *copied from refills
