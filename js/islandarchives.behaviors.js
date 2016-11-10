@@ -16,6 +16,22 @@
         // Now, we are invoking the previously declared theme function using two
 		  $(this).empty().append( '<i class="fa fa-th" aria-hidden="true"></i>' );
       });
+      $('.pager__item--first', context).once('collection_view_buttons', function () {
+        // Now, we are invoking the previously declared theme function using two
+		  $(this).prepend( '<i class="fa fa-angle-double-left" aria-hidden="true"></i>' );
+      });
+      $('.pager__item--previous', context).once('collection_view_buttons', function () {
+        // Now, we are invoking the previously declared theme function using two
+		  $(this).prepend( '<i class="fa fa-angle-left" aria-hidden="true"></i>' );
+      });
+      $('.pager__item--next', context).once('collection_view_buttons', function () {
+        // Now, we are invoking the previously declared theme function using two
+		  $(this).prepend( '<i class="fa fa-angle-right" aria-hidden="true"></i>' );
+      });
+      $('.pager__item--last', context).once('collection_view_buttons', function () {
+        // Now, we are invoking the previously declared theme function using two
+		  $(this).prepend( '<i class="fa fa-angle-double-left" aria-hidden="true"></i>' );
+      });
     }
   }
 
