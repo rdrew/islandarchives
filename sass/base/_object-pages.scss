@@ -1,0 +1,23 @@
+.page-islandora-object {
+	h1 {
+		margin: 1rem 0;
+	}
+
+	.breadcrumb {
+		margin-bottom: 1rem;
+	}
+}
+
+.islandora-basic-collection-display-switch {
+	.links li {
+	
+		display: inline-block;
+		&:last-child {
+		 margin-left: .5rem;
+		}
+	
+	}
+	a:link {
+		@extend .normal_link;
+	}
+}

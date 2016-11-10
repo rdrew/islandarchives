@@ -433,10 +433,30 @@ hr {
   text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
   background: #b4d5fe; }
 
+.normal_link, .l-main a.contextual-links-trigger:link,
+.l-main ul.contextual-links a:link, .islandora-basic-collection-display-switch a:link {
+  text-decoration: initial;
+  background: initial;
+  background-size: initial;
+  background-repeat: initial;
+  text-shadow: initial;
+  background-position: initial; }
+
 /* Sidenotes, margin notes, figures, captions */
 /*
  *copied from refills
  */
+.page-islandora-object h1, .page-islandora-object .site-branding__name {
+  margin: 1rem 0; }
+
+.page-islandora-object .breadcrumb {
+  margin-bottom: 1rem; }
+
+.islandora-basic-collection-display-switch .links li {
+  display: inline-block; }
+  .islandora-basic-collection-display-switch .links li:last-child {
+    margin-left: .5rem; }
+
 html {
   box-sizing: border-box; }
 
@@ -498,27 +518,6 @@ html {
 
 .tabs li {
   display: inline-block; }
-
-ul.pager li {
-  background: #f7f7f7;
-  font-family: Roboto;
-  font-size: .8em;
-  font-weight: 100;
-  border-radius: 3px;
-  border: 1px solid #ddd;
-  color: #333;
-  outline: none;
-  padding: 0.375em 0.809em;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out; }
-  ul.pager li:hover, ul.pager li:focus {
-    background: white;
-    color: #5c8727; }
-  ul.pager li.pager__item--current {
-    background: white; }
-
-.pager__item {
-  padding: 0; }
 
 .islandora-solr-simple-search-form,
 form.search-block-form {
