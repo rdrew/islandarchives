@@ -21,3 +21,25 @@
 		@extend .normal_link;
 	}
 }
+
+//-----------------------
+//-  large image pages  -
+//-----------------------
+
+//block layout
+//.islandora-large-image-object {
+  //@include outer-container;
+
+//}
+
+//.islandora-large-image-content-wrapper {
+//@include span-columns(6);
+//}
+
+//.islandora-large-image-metadata {
+
+//@include span-columns(6);
+//@include omega();
+//clear: initial;
+//}
+

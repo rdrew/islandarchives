@@ -1,0 +1,81 @@
+.islandora-metadata dl {
+	
+}
+/*
+    Document   : islandora_basic_collection.theme
+    Created on : May 23, 2012, 11:23:56 AM
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+ * Thumbnails float optionally to the left or right of descriptive lists.
+ */
+
+dl.islandora-object-tn {
+  float: left;
+  //margin: 1.5em 0;
+  //padding: 0 10px 0 0;
+  //width: 20.8333%;
+}
+
+dl.islandora-object-fields {
+  border-top: 0px solid #ddd;
+  float: right;
+  margin: 1.5em 0;
+  //width: 79.1666%;
+}
+
+.islandora-object-fields dt {
+  font-weight: bold;
+}
+
+.islandora-object-fields dt.first {
+  border-top: 0;
+}
+
+.islandora-object-fields dt,
+.islandora-object-fields dd {
+	border-top: $base-border;
+  //padding: 6px 2% 4px;
+}
+
+.islandora-object-fields dt.first,
+.islandora-object-fields dd.first {
+  border-top: 0;
+}
+
+dl.islandora-inline-metadata {
+  margin: 0 auto;
+  letter-spacing: -0.31em;
+  *letter-spacing:normal;
+  word-spacing: -0.43em;
+}
+
+.islandora-inline-metadata dt {
+  margin-right: -1px;
+  width: 10%;
+  font-weight: bold;
+  padding-right: 0;
+  word-wrap: normal;
+}
+
+.islandora-inline-metadata dd {
+  width: 90%;
+  padding-left: 40px;
+}
+
+dl.islandora-metadata-fields {
+    width:100%;
+}
+
+.islandora-metadata dt,
+.islandora-metadata dd {
+    border-top:1px solid #e5e5e5;
+}
+
+.islandora-metadata dt.first,
+.islandora-metadata dd.first {
+    border-top:0;
+}
+
