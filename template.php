@@ -56,3 +56,12 @@ function islandarchives_preprocess_islandora_basic_collection_wrapper(&$variable
 
 
 }
+function islandarchives_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'islandora_solr_simple_search_form') {
+
+$form['simple']['submit']['#value'] = decode_entities('&#xf002;');
+
+	  
+  
+  }
+}

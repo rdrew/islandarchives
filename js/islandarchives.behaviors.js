@@ -2,16 +2,6 @@
 
   Drupal.behaviors.collection_view_buttons = {
     attach: function (context, settings) {
-
-      $('.islandora-solr-simple-search-form input[type="submit"]', context).once('foo', function () {
-        // Now, we are invoking the previously declared theme function using two
-		  $(this).hide();
-      });
-
-    }
-  }
-  Drupal.behaviors.collection_view_buttons = {
-    attach: function (context, settings) {
       // By using the 'context' variable we make sure that our code only runs on
       // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
       // we don't run the same piece of code for an HTML snippet that we already
