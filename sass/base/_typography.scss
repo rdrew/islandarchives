@@ -40,7 +40,7 @@ h2 {
 	font-style: italic;
 	font-weight: 400;
 	margin-top: 2.1rem;
-	margin-bottom: 0;
+	margin-bottom: $small-spacing;
 	font-size: 2.2rem;
 	line-height: 1;
 }
@@ -58,7 +58,7 @@ p {
 	margin: 0 0 $small-spacing;
 }
 
-p, ol, ul {
+p, ol, ul, dl {
 	font-size: 1.4rem;
 }
 
