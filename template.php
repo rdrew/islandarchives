@@ -35,6 +35,7 @@ function islandarchives_css_alter(&$css) {
     'modules/system/system.messages.css' => FALSE,
     'modules/system/system.menus.css' => FALSE,
 	'sites/all/themes/omega/omega/css/modules/system/system.menus.theme.css' => FALSE,
+	'sites/all/modules/islandora_modules/islandora_modules/islandora_solution_pack_collection/css/islandora_basic_collection.base.css' => FALSE,
 //    'modules/system/system.theme.css' => FALSE,
 //    'modules/taxonomy/taxonomy.css' => FALSE,
 //    'modules/tracker/tracker.css' => FALSE,
