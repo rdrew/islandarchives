@@ -57,14 +57,20 @@ $base-z-index: 0;
 $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
-$light-gray: #ddd;
-$green: #5c8727;
+$light-gray: #ccc;
+//$green: #5c8727;
+
+$red: #8c2004;
+$green: #5C8727;
+$light-green: rgb(231, 237, 224);
+$yellow: #FBB040;
 // Font Colors
 $base-font-color: $dark-gray;
 $action-color: $green;
 
 // Border
-$base-border-color: $light-gray;
+//$base-border-color: $light-gray;
+$base-border-color: #adad97;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
