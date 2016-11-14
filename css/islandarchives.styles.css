@@ -659,9 +659,14 @@ form.search-block-form {
     padding: 0.5rem 0.5rem;
     position: relative;
     transition: border-color;
-    width: 100%; }
+    width: 100%;
+    border-radius: 20px; }
   .islandora-solr-simple-search-form input[type=submit],
   form.search-block-form input[type=submit] {
+    font-family: "Fontawesome";
+    color: #5C8727;
+    font-size: 1.2em;
+    background: none;
     position: absolute;
     top: 0;
     right: 0;

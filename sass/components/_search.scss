@@ -1,5 +1,6 @@
 .islandora-solr-simple-search-form,
 form.search-block-form {
+
 	///////////////////////////////////////////////////////////////////////////////////
 	$base-spacing: 1.5em !default;
 	$base-border-color: gainsboro !default;
@@ -26,9 +27,15 @@ form.search-block-form {
 		position: relative;
 		transition: border-color;
 		width: 100%;
+		border-radius: 20px;
 	}
 
 	input[type=submit] {
+		font-family: "Fontawesome";
+		//color: #333;
+		color: $green;
+		font-size: 1.2em;
+		background: none;
 		@include position(absolute, 0 0 0 null);
 
 		outline: none;
