@@ -1,6 +1,6 @@
 .islandora-basic-collection-grid a:link {
 	@extend .normal_link;
-	
+}
 /*
     Document   : islandora_basic_collection.base.css
     Created on : May 23, 2012, 11:22:04 AM
@@ -11,43 +11,122 @@
 
 /* List - Displays lists using a dt on the left and dd on the right */
 
-.islandora-basic-collection-list-item {
-  clear: both;
-  width: 100%;
-}
+//.islandora-basic-collection-list-item {
+  //clear: both;
+  //width: 100%;
+//}
 
-.islandora-basic-collection-list-item dl dt {
-  clear: left;
-  float: left;
-  padding: 3px 0 0;
-  text-align: center;
-  width: 100px;
-}
+//.islandora-basic-collection-list-item dl dt {
+  //clear: left;
+  //float: left;
+  //padding: 3px 0 0;
+  //text-align: center;
+  //width: 100px;
+//}
 
-.islandora-basic-collection-list-item dl dd {
-  margin: 0 0 0 130px;
-}
+//.islandora-basic-collection-list-item dl dd {
+  //margin: 0 0 0 130px;
+//}
 
-/* Grid - Displays grid using dl formatted inline */
-.islandora-basic-collection-grid dl {
-  width: 20%;
-  min-width: 100px;
-  min-height: 180px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  margin: 1.5em 1.84%;
-  zoom: 1;
-  *display: inline;
-  _height: 180px;
-}
+//[> Grid - Displays grid using dl formatted inline <]
+//.islandora-basic-collection-grid dl {
+  //width: 20%;
+  //min-width: 100px;
+  //min-height: 180px;
+  //display: -moz-inline-stack;
+  //display: inline-block;
+  //vertical-align: top;
+  //margin: 1.5em 1.84%;
+  //zoom: 1;
+  //*display: inline;
+  //_height: 180px;
+//}
 
-.islandora-basic-collection-grid dd {
-  margin: 0;
-  padding: 0;
-}
+//.islandora-basic-collection-grid dd {
+  //margin: 0;
+  //padding: 0;
+//}
 
 .islandora-basic-collection-display-switch {
   float: right;
 }
+.islandora-basic-collection {
+	margin-top: $base-spacing;
+	
 }
+.flex-boxes {
+  //$flex-box-border-color: $light-gray;
+  $flex-box-border-color: $base-border-color;
+  $flex-box-border: 1px solid $flex-box-border-color;
+  $flex-box-background: lighten($light-gray, 10%);
+  $flex-box-gutter: $base-spacing/2;
+  $flex-box-width: 18em;
+  $flex-box-color: transparentize($base-font-color, 0.3);
+  $flex-box-top-color: $medium-gray;
+  $flex-box-top-colors:
+    tomato,
+    #72BFBF,
+    #92B1E3,
+    #E3D743,
+    #CCC,
+    #F6C05C;
+
+  @include clearfix;
+  align-items: stretch;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  .flex-box {
+    align-self: stretch;
+    background: white;
+    border-radius: $base-border-radius;
+    box-shadow: inset 0 0 1px $flex-box-border-color/*, 0 2px 4px darken( white, 10%)*/;
+    display: block;
+    flex: 2 2 15em;
+    margin: $flex-box-gutter;
+    padding: 2em 2em 1em 2em;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    //@for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
+      //&:nth-child(#{$i}) {
+        //$color-from-list: nth($flex-box-top-colors, $i);
+		//border-top: 6px solid $color-from-list;
+		border-top: 6px solid $flex-box-top-color;
+
+		&:focus,
+		&:hover {
+		  //background-color: transparentize($color-from-list, 0.9);
+		  background-color: transparentize($flex-box-top-color, 0.9);
+		}
+      //}
+    //}
+
+    img {
+      display: block;
+      height: 8em;
+      margin: 0 auto 1em;
+      //opacity: 0.4;
+    }
+
+    .flex-title {
+      //color: $flex-box-color;
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      color: transparentize($flex-box-color, 0.1);
+      line-height: 1.5em;
+      margin: auto;
+    }
+  }
+
+  .flex-box-big {
+    flex: 1 1 40em;
+  }
+}
+
