@@ -1,5 +1,9 @@
 (function ($) {
 
+  Drupal.behaviors.cssSwap = {
+    attach: function (context, settings) {
+    }
+  }
   Drupal.behaviors.bookmark_modals = {
     attach: function (context, settings) {
       $('ul.field-collection-view-links a', context).once('foo', function () {
