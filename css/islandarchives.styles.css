@@ -1,7 +1,7 @@
 /*// {{{
  *this is copies from tufte.css font set (et-book)
  */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);
 @font-face {
   font-family: "et-book";
   src: url("../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
