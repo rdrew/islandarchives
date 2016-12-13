@@ -1,0 +1,48 @@
+.page-node-119 {
+.container {
+	
+		@include outer-container(100%);
+		padding: 0 1em;
+	   .logo_block	{
+
+		   @include span-columns(4);
+			
+		}
+		.l-region--navigation {
+		
+		   @include span-columns(8);
+		}
+}
+
+	.l-region--navigation {
+		//@include clearfix;
+		//border-bottom: 1px solid #d8d8d8;
+		padding: $small-spacing 0;
+		width: 100%;
+
+		@include outer-container(100%);
+		nav {
+			@include span-columns(9);
+		}
+
+		.block--islandora-solr {
+			@include span-columns(3);
+		}
+
+
+		.menu {
+			li {
+				display: inline-block;
+				padding-right: 1em;
+
+				a {
+					font-family: $sans-serif;
+					color: #333;
+					font-weight: 100;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+}
