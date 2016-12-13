@@ -355,7 +355,7 @@ h4,
 h5,
 h6 {
   font-family: et-book;
-  font-size: 1.25em;
+  /*font-size: modular-scale(1);*/
   line-height: 1.2;
   margin: 0 0 0.75rem; }
 
@@ -555,6 +555,63 @@ hr {
 
 .footer-links .title {
   margin-bottom: .5rem; }
+
+.page-node-119 .container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em; }
+  .page-node-119 .container::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .page-node-119 .container .logo_block {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .page-node-119 .container .logo_block:last-child {
+      margin-right: 0; }
+  .page-node-119 .container .l-region--navigation {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .page-node-119 .container .l-region--navigation:last-child {
+      margin-right: 0; }
+
+.page-node-119 .l-region--navigation {
+  padding: 0.75rem 0;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .page-node-119 .l-region--navigation::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .page-node-119 .l-region--navigation nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    .page-node-119 .l-region--navigation nav:last-child {
+      margin-right: 0; }
+  .page-node-119 .l-region--navigation .block--islandora-solr {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .page-node-119 .l-region--navigation .block--islandora-solr:last-child {
+      margin-right: 0; }
+  .page-node-119 .l-region--navigation .menu li {
+    display: inline-block;
+    padding-right: 1em; }
+    .page-node-119 .l-region--navigation .menu li a {
+      font-family: Roboto;
+      color: #333;
+      font-weight: 100;
+      font-size: 1rem; }
 
 /*
     Document   : islandora_basic_collection.theme

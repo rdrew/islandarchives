@@ -19,6 +19,7 @@
     "gulp-watch": "^4.3.3",
     "livereload": "^0.6.0",
     "node-sass-globbing": "0.0.23",
+    "nproxy": "^1.4.5",
     "vanilla-framework": "^1.0.1"
   }
 }
