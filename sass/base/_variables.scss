@@ -61,6 +61,7 @@ $light-gray: #ccc;
 //$green: #5c8727;
 
 $red: #8c2004;
+$parchment: #fffef2;
 $green: #5C8727;
 $light-green: rgb(231, 237, 224);
 $yellow: #FBB040;
@@ -74,7 +75,7 @@ $base-border-color: #adad97;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fffff8;
+$base-background-color: $parchment;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms
