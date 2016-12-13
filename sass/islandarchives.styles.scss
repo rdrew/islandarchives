@@ -1,31 +1,18 @@
 // Import Bourbon.
 @import "../libraries/bourbon/core/bourbon";
 
-// Import Bitters.
-@import "base/base";
-
 // Import Neat.
 @import "../libraries/neat/app/assets/stylesheets/neat";
 @import "../libraries/neat/app/assets/stylesheets/neat-helpers";
 
 
-
-
-
-
-
-
-//@import "variables/{YOUR FILE NAME HERE}";
-//@import "abstractions/{YOUR FILE NAME HERE}";
-//@import "base/{YOUR FILE NAME HERE}";
-@import "components/@components";
-body {
-	/*background: blue  !important;*/
-	
-}
+@import "variables/**/*.scss";
+@import "abstractions/**/*.scss";
+@import "base/base";
+@import 'components/**/*.scss';
 
 .site-branding__logo {
-	//display: none ;
+  //display: none ;
 	
 }
 .footer-2 .footer-logo img {
