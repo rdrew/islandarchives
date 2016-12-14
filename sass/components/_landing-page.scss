@@ -1,18 +1,102 @@
 .page-node-119 {
-.container {
-	
-		@include outer-container(100%);
-		padding: 0 1em;
-	   .logo_block	{
+	/*apply this to the body tag*/
+	padding-top: 100px;
 
-		   @include span-columns(4);
-			
+	.l-region--navigation {
+		margin-top: $small-spacing;
+		transition: $base-transition;
+	}
+
+	.navbar {
+		background-color: $header-background-color;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100%;
+		transition: $base-transition;
+
+		/*height: 200px;*/
+		box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+		padding-bottom: .5rem;
+
+		.site-branding__logo img {
+			height: 77px;
+			width: auto;
 		}
+
+		&.sticky {
+			/*height: 100px;*/
+
+			.l-region--navigation {
+				margin: 0;
+				transition: $base-transition;
+			}
+
+			.site-branding__logo img {
+				transition: $base-transition;
+				height: 50px;
+				width: auto;
+			}
+
+			a.site-branding__name {
+				transition: $base-transition;
+				font-size: 1.9em;
+			}
+
+			h2.site-branding__slogan {
+				transition: $base-transition;
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.hero {
+		$large-screen: 50em !default;
+
+		align-items: center;
+		background: image-url("http://placehold.it/350x150");
+		background-position: right;
+		background-size: none;
+		display: flex;
+		justify-content: center;
+		min-height: 25em;
+		padding: 2em;
+
+		background-color: $medium-gray;
+		@include media($large-screen) {
+			background-position: left;
+			background-size: cover;
+			justify-content: flex-end;
+		}
+
+
+		.hero-content {
+			max-width: 20em;
+			text-align: center;
+
+			@include media($large-screen) {
+				text-align: left;
+			}
+		}
+
+		.hero-logo {
+			margin: auto;
+		}
+	}
+
+	.container {
+		@include outer-container(100%);
+
+		padding: 0 1em;
+
+		.logo_block {
+			@include span-columns(4);
+		}
+
 		.l-region--navigation {
-		
-		   @include span-columns(8);
+			@include span-columns(8);
 		}
-}
+	}
 
 	.l-region--navigation {
 		//@include clearfix;
@@ -21,6 +105,7 @@
 		width: 100%;
 
 		@include outer-container(100%);
+
 		nav {
 			@include span-columns(9);
 		}
@@ -28,7 +113,6 @@
 		.block--islandora-solr {
 			@include span-columns(3);
 		}
-
 
 		.menu {
 			li {
@@ -44,5 +128,4 @@
 			}
 		}
 	}
-
 }
