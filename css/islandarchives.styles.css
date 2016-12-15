@@ -47,7 +47,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
   padding: 0.75rem 1.5rem;
   text-align: center;
   text-decoration: none;
-  transition: background-color 150ms ease;
+  transition: background-color 400ms ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -98,7 +98,7 @@ textarea {
   box-sizing: border-box;
   margin-bottom: 0.75rem;
   padding: 0.5rem;
-  transition: border-color 150ms ease;
+  transition: border-color 400ms ease;
   width: 100%; }
   [type='color']:hover, [type='date']:hover, [type='datetime']:hover, [type='datetime-local']:hover, [type='email']:hover, [type='month']:hover, [type='number']:hover, [type='password']:hover, [type='search']:hover, [type='tel']:hover, [type='text']:hover, [type='time']:hover, [type='url']:hover, [type='week']:hover, input:not([type]):hover, textarea:hover {
     border-color: #8a8a79; }
@@ -403,7 +403,7 @@ code {
 a {
   color: #5C8727;
   text-decoration: none;
-  transition: color 150ms ease; }
+  transition: color 400ms ease; }
   a:active, a:focus, a:hover {
     color: #45651d; }
 
@@ -556,62 +556,122 @@ hr {
 .footer-links .title {
   margin-bottom: .5rem; }
 
-.page-node-119 .container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1em; }
-  .page-node-119 .container::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .page-node-119 .container .logo_block {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    .page-node-119 .container .logo_block:last-child {
-      margin-right: 0; }
-  .page-node-119 .container .l-region--navigation {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%; }
-    .page-node-119 .container .l-region--navigation:last-child {
-      margin-right: 0; }
-
-.page-node-119 .l-region--navigation {
-  padding: 0.75rem 0;
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .page-node-119 .l-region--navigation::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .page-node-119 .l-region--navigation nav {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%; }
-    .page-node-119 .l-region--navigation nav:last-child {
-      margin-right: 0; }
-  .page-node-119 .l-region--navigation .block--islandora-solr {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    .page-node-119 .l-region--navigation .block--islandora-solr:last-child {
-      margin-right: 0; }
-  .page-node-119 .l-region--navigation .menu li {
-    display: inline-block;
-    padding-right: 1em; }
-    .page-node-119 .l-region--navigation .menu li a {
-      font-family: Roboto;
-      color: #333;
-      font-weight: 100;
-      font-size: 1rem; }
+.page-node-119 {
+  /*apply this to the body tag*/
+  padding-top: 100px; }
+  .page-node-119 .l-region--navigation {
+    margin-top: 0.75rem;
+    transition: all 400ms ease; }
+  .page-node-119 .navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transition: all 400ms ease;
+    /*height: 200px;*/
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+    padding-bottom: .5rem; }
+    .page-node-119 .navbar .site-branding__logo img {
+      height: 77px;
+      width: auto; }
+    .page-node-119 .navbar.sticky {
+      /*height: 100px;*/ }
+      .page-node-119 .navbar.sticky .l-region--navigation {
+        margin: 0;
+        transition: all 400ms ease; }
+      .page-node-119 .navbar.sticky .site-branding__logo img {
+        transition: all 400ms ease;
+        height: 50px;
+        width: auto; }
+      .page-node-119 .navbar.sticky a.site-branding__name {
+        transition: all 400ms ease;
+        font-size: 1.9em; }
+      .page-node-119 .navbar.sticky h2.site-branding__slogan {
+        transition: all 400ms ease;
+        font-size: 1.5em; }
+  .page-node-119 .hero {
+    -ms-flex-align: center;
+        align-items: center;
+    background: image-url("http://placehold.it/350x150");
+    background-position: right;
+    background-size: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    min-height: 25em;
+    padding: 2em;
+    background-color: #999; }
+    @media screen and (min-width: 900px) {
+      .page-node-119 .hero {
+        background-position: left;
+        background-size: cover;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
+    .page-node-119 .hero .hero-content {
+      max-width: 20em;
+      text-align: center; }
+      @media screen and (min-width: 900px) {
+        .page-node-119 .hero .hero-content {
+          text-align: left; } }
+    .page-node-119 .hero .hero-logo {
+      margin: auto; }
+  .page-node-119 .container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em; }
+    .page-node-119 .container::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .page-node-119 .container .logo_block {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .page-node-119 .container .logo_block:last-child {
+        margin-right: 0; }
+    .page-node-119 .container .l-region--navigation {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .page-node-119 .container .l-region--navigation:last-child {
+        margin-right: 0; }
+  .page-node-119 .l-region--navigation {
+    padding: 0.75rem 0;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    .page-node-119 .l-region--navigation::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .page-node-119 .l-region--navigation nav {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      .page-node-119 .l-region--navigation nav:last-child {
+        margin-right: 0; }
+    .page-node-119 .l-region--navigation .block--islandora-solr {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .page-node-119 .l-region--navigation .block--islandora-solr:last-child {
+        margin-right: 0; }
+    .page-node-119 .l-region--navigation .menu li {
+      display: inline-block;
+      padding-right: 1em; }
+      .page-node-119 .l-region--navigation .menu li a {
+        font-family: Roboto;
+        color: #333;
+        font-weight: 100;
+        font-size: 1rem; }
 
 /*
     Document   : islandora_basic_collection.theme
