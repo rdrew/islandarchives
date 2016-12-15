@@ -559,6 +559,10 @@ hr {
 .page-node-119 {
   /*apply this to the body tag*/
   padding-top: 100px; }
+  .page-node-119 .l-region--footer {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem; }
   .page-node-119 .l-region--navigation {
     margin-top: 0.75rem;
     transition: all 400ms ease; }
