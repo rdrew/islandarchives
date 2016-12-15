@@ -5,6 +5,7 @@
 
 .navbar {
 	background-color: $header-background-color;
+  z-index:998;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -45,7 +46,11 @@
 		}
 	}
 }
+.logged-in .navbar {
 
+  top: 28px;
+
+}
 .container {
 	@include outer-container(100%);
 
