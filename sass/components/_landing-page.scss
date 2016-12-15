@@ -1,62 +1,8 @@
 .page-node-119 {
-.l-region--footer {
-
-	width:100%;
-	padding-right: $base-spacing;
-	padding-left: $base-spacing;
-
-
-}
 	/*apply this to the body tag*/
 	padding-top: 100px;
 
-	.l-region--navigation {
-		margin-top: $small-spacing;
-		transition: $base-transition;
-	}
 
-	.navbar {
-		background-color: $header-background-color;
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100%;
-		transition: $base-transition;
-
-		/*height: 200px;*/
-		box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
-		padding-bottom: .5rem;
-
-		.site-branding__logo img {
-			height: 77px;
-			width: auto;
-		}
-
-		&.sticky {
-			/*height: 100px;*/
-
-			.l-region--navigation {
-				margin: 0;
-				transition: $base-transition;
-			}
-
-			.site-branding__logo img {
-				transition: $base-transition;
-				height: 50px;
-				width: auto;
-			}
-
-			a.site-branding__name {
-				transition: $base-transition;
-				font-size: 1.9em;
-			}
-
-			h2.site-branding__slogan {
-				transition: $base-transition;
-				font-size: 1.5em;
-			}
-		}
-	}
 
 	.hero {
 		$large-screen: 50em !default;
@@ -92,50 +38,7 @@
 		}
 	}
 
-	.container {
-		@include outer-container(100%);
 
-		padding: 0 1em;
-
-		.logo_block {
-			@include span-columns(4);
-		}
-
-		.l-region--navigation {
-			@include span-columns(8);
-		}
-	}
-
-	.l-region--navigation {
-		//@include clearfix;
-		//border-bottom: 1px solid #d8d8d8;
-		padding: $small-spacing 0;
-		width: 100%;
-
-		@include outer-container(100%);
-
-		nav {
-			@include span-columns(9);
-		}
-
-		.block--islandora-solr {
-			@include span-columns(3);
-		}
-
-		.menu {
-			li {
-				display: inline-block;
-				padding-right: 1em;
-
-				a {
-					font-family: $sans-serif;
-					color: #333;
-					font-weight: 100;
-					font-size: 1rem;
-				}
-			}
-		}
-	}
 
 	//refills grid
 	@mixin grid-item-columns($columns) {

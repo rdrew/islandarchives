@@ -71,7 +71,8 @@ body {
 }
 
 .l-main {
-	margin-top: 2 * $base-spacing;
+	/*margin-top: 2 * $base-spacing;*/
+	margin-top: 135px;
 	margin-bottom: 2 * $base-spacing;
 }
 
@@ -111,8 +112,8 @@ body {
 	}
 
 	/* Sidebars */
-	.has-two-sidebars,
-	.has-one-sidebar {
+	.two-sidebars,
+	.one-sidebar {
 		.l-content {
 			@include span-columns(8);
 		}
@@ -133,7 +134,7 @@ body {
 	}
 
 	/* Sidebars */
-	.has-one-sidebar {
+	.one-sidebar {
 		.l-content {
 			@include span-columns(8);
 		}
@@ -146,7 +147,7 @@ body {
 		}
 	}
 
-	.has-two-sidebars {
+	.two-sidebars {
 		.l-content {
 			@include span-columns(6);
 		}
