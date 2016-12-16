@@ -57,11 +57,11 @@
 	padding: 0 1em;
 
 	.logo_block {
-		@include span-columns(4);
+		@include span-columns(5);
 	}
 
 	.l-region--navigation {
-		@include span-columns(8);
+		@include span-columns(7);
 	}
 }
 
