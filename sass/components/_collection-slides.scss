@@ -1,0 +1,23 @@
+.close-btn {
+@extend button;
+text-transform: uppercase;
+float: right;
+}
+.node_link a {
+	@extend button;
+	float: right;
+	
+}
+
+.collection-slide {
+	@include clearfix;
+	background-color: $tan;
+	box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
+	padding: $base-spacing;
+	&__title {
+display: inline-block;	
+		margin: 0;
+	
+	}
+	
+}
