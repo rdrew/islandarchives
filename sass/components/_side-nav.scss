@@ -1,0 +1,19 @@
+aside nav.block {
+	background-color: #fff;
+	border: $base-border;
+	padding: $small-spacing $base-spacing;
+	.block__title {
+	margin-top: 0;
+	border-bottom: 3px solid $green;
+	}
+	.menu a {
+		font-family: $sans-serif;
+		font-size: .7em;
+	
+		font-weight: 200;
+	
+	}
+
+
+
+}

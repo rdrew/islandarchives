@@ -30,7 +30,8 @@ h6 {
 
 h1 {
 	font-weight: 400;
-	margin-top: 4rem;
+	/*margin-top: 4rem;*/
+	margin-top: $base-spacing;
 	margin-bottom: 1.5rem;
 	font-size: 3.2rem;
 	line-height: 1;
@@ -96,9 +97,12 @@ hr {
 	margin: $base-spacing 0;
 }
 
+.pageTitle {
+margin-top: $base-spacing;
+}
 .l-main {
   /* Links: replicate underline that clears descenders */
-  @extend %nice_underline;
+  /*@extend %nice_underline;*/
 }
 .normal_link {
 	text-decoration: initial;
