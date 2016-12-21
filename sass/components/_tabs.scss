@@ -1,6 +1,7 @@
 .tabs {
 	border: $base-border;
 	border-width: 1px 0;
+	margin-bottom: $base-spacing;
 	li {
 		display: inline-block;
 		margin-right: $small-spacing;
