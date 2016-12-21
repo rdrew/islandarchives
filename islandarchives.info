@@ -16,6 +16,7 @@ stylesheets[all][] = css/crap_im_not_proud_of.styles.css
 ; Scripts
 ; ========================================
 scripts[] = js/islandarchives.behaviors.js
+scripts[] = js/smoothScroll.js
 
 ; ========================================
 ; Regions

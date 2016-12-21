@@ -5,6 +5,7 @@
 
 .navbar {
 	background-color: $header-background-color;
+  z-index:998;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -45,18 +46,22 @@
 		}
 	}
 }
+.logged-in .navbar {
 
+  top: 28px;
+
+}
 .container {
 	@include outer-container(100%);
 
 	padding: 0 1em;
 
 	.logo_block {
-		@include span-columns(4);
+		@include span-columns(5);
 	}
 
 	.l-region--navigation {
-		@include span-columns(8);
+		@include span-columns(7);
 	}
 }
 

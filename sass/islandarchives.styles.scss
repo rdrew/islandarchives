@@ -7,22 +7,14 @@
 
 
 //@import "variables/**/*.scss";
-//@import "abstractions/**/*.scss";
+@import "abstractions/**/*.scss";
 @import "base/base";
 @import 'components/**/*.scss';
 
-.site-branding__logo {
-  //display: none ;
-	
-}
-.footer-2 .footer-logo img {
-	width: 107px;
-	height: auto;
-}
+
 .site-branding__name {
-	@extend h1;
-	
+  @extend h1;
 }
- .l-branding {
-     width: 100%  !important;
-   }
+.l-branding {
+  width: 100%  !important;
+}
