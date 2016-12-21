@@ -34,7 +34,7 @@
   <!--	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi doloremque excepturi laudantium maxime explicabo cumque deleniti voluptate deserunt.</p>i 
 -->
     <p>
-      <?php print render($content['body']); ?>
+	  <?php print render($page['content']); ?>
     </p>
 	  </div>
 	</div>
