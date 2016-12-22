@@ -21,8 +21,19 @@
 
 
   .hero-content {
-    max-width: 20em;
+	  padding: $small-spacing;
+	  margin-top: 8em;
+	  $hero_bg_color: rgba(255, 255, 255, 0.42);
+        background-color: $hero_bg_color;
+		    box-shadow: 0 0 5px 10px $hero_bg_color;
+	  max-width: 33em;
     text-align: center;
+	h1 {
+		margin: 0 0 $small-spacing 0;
+	}
+	p {
+	margin: 0;
+	}
 
     @include media($large-screen) {
       text-align: left;
