@@ -756,7 +756,8 @@ hr {
   /*margin-top: 135px;*/
   -ms-flex-align: center;
       align-items: center;
-  background: image-url("http://placehold.it/350x150");
+  /*background: image-url("http://placehold.it/350x150");*/
+  background: image-url("../images/photo_1910_20120525.jpg");
   background-position: right;
   background-size: none;
   display: -ms-flexbox;
