@@ -5,7 +5,7 @@
   align-items: center;
   /*this image is from http://freestock.ca/canada_g92-pei_coastal_scenery__hdr_p1910.html and is ok for no commercial use*/
   background-image: url("../images/photo_1910_20120525.jpg");
-  background-position: left -44px;
+  background-position: right;
   background-size: none;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
   background-color: $medium-gray;
 
   @include media($large-screen) {
-    background-position: left;
+  background-position: left -44px;
     background-size: cover;
     justify-content: flex-end;
   }
