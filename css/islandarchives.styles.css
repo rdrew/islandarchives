@@ -849,26 +849,37 @@ dl.islandora-metadata-fields {
 .islandora-metadata dd.first {
   border-top: 0; }
 
-ul.pager li {
-  background: #c3c3b4;
-  font-family: Roboto;
-  font-size: .8em;
-  font-weight: 100;
-  border-radius: 3px;
-  border: 1px solid #adad97;
-  color: #333;
-  outline: none;
-  padding: 0.375rem 0.809em;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out; }
-  ul.pager li:hover, ul.pager li:focus {
-    background: #cfcfc2;
-    color: #5C8727; }
-  ul.pager li.pager__item--current {
-    background: #cfcfc2; }
+ul.pager {
+  /*$base-border-color: gainsboro !default;*/
+  /*$pagination-background: lighten($pagination-border-color, 10);*/
+  /*$pagination-hover-background: lighten($pagination-background, 10);*/ }
+  ul.pager li {
+    background: #cfc5aa;
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-size: .7em;
+    font-weight: 100;
+    border-radius: 3px;
+    border: 1px solid #adad97;
+    color: #333;
+    outline: none;
+    padding: 0.375rem 0.809em;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out; }
+    ul.pager li:hover, ul.pager li:focus {
+      background: #fff;
+      /*color: $action-color;*/ }
+    ul.pager li.pager__item--current {
+      background: #fff; }
+    ul.pager li a {
+      color: #333; }
 
 .pager__item {
   padding: 0; }
+  .pager__item--first i, .pager__item--previous i {
+    margin-right: 4px; }
+  .pager__item--next i, .pager__item--last i {
+    margin-left: 4px; }
 
 .islandora-solr-simple-search-form,
 form.search-block-form {
