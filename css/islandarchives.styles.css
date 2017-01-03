@@ -464,6 +464,9 @@ hr {
   .islandora-basic-collection-display-switch .links li:last-child {
     margin-left: .5rem; }
 
+.islandora-basic-collection-display-switch a:link {
+  color: #333; }
+
 .site-branding__logo {
   float: left;
   margin-right: 1em; }
