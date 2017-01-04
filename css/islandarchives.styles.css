@@ -744,7 +744,7 @@ ul#superfish-1-accordion {
 .container {
   padding: 0 1em; }
   .container > div {
-    outline: 1px solid red; }
+    /*outline: 1px solid red;*/ }
   .container .site-branding {
     /*width: 20em;*/
     /*position:absolute;*/ }
