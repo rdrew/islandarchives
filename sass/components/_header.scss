@@ -1,11 +1,16 @@
-.l-region--navigation {
-	margin-top: $small-spacing;
-	transition: $base-transition;
+.logged-in .navbar {
+	top: 57px;
+
+	@include media($large-screen) {
+		top: 28px;
+	}
 }
 
-.navbar {
+header {
 	background-color: $header-background-color;
-  z-index:998;
+
+	// {{{
+	z-index: 998;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -17,88 +22,117 @@
 	padding-bottom: .5rem;
 
 	.site-branding__logo img {
-		height: 77px;
-		width: auto;
+		/*width: 60px;*/
 	}
 
 	&.sticky {
-		/*height: 100px;*/
+			 /*height: 100px;*/
 
 		.l-region--navigation {
-			margin: 0;
-			transition: $base-transition;
+		margin: 0;
+		transition: $base-transition;
 		}
 
 		.site-branding__logo img {
-			transition: $base-transition;
-			height: 50px;
-			width: auto;
+		transition: $base-transition;
+		width: 40px;
 		}
 
 		a.site-branding__name {
-			transition: $base-transition;
-			font-size: 1.9em;
+		transition: $base-transition;
+		font-size: 1.9em;
 		}
 
 		h2.site-branding__slogan {
-			transition: $base-transition;
-			font-size: 1.5em;
+		transition: $base-transition;
+		font-size: 1.5em;
 		}
 	}
-}
-.logged-in .navbar {
 
-  top: 28px;
-
+	// }}}
 }
+
+.topnav {
+	/*position: relative;*/
+	/*top:0;*/
+}
+
+.topnav span {
+	/*font-size: 3em;*/
+	/*line-height: 1;*/
+	float: right;
+}
+
+.sf-accordion-toggle {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.sf-accordion-toggle span {
+	display: none;
+}
+.sf-accordion-toggle a {
+	display: inline-block;
+
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 2em;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+
+	&:before {
+		content: "\f0c9";
+	}
+}
+
+ul#superfish-1-accordion {
+	width: 204px;
+	float: right;
+	background: #fff;
+	padding: .5em;
+	border: 1px solid #ccc;
+}
+
 .container {
-	@include outer-container(100%);
+	> div {
+		outline: 1px solid red;
+	}
 
 	padding: 0 1em;
 
-	.logo_block {
-		@include span-columns(5);
+	.site-branding {
+		/*width: 20em;*/
+
+		/*position:absolute;*/
+		@include clearfix;
 	}
 
-	.l-region--navigation {
-		@include span-columns(7);
-	}
-}
-
-.l-region--navigation {
-	//@include clearfix;
-	//border-bottom: 1px solid #d8d8d8;
-	padding: $small-spacing 0;
-	width: 100%;
-
-	@include outer-container(100%);
-
-	nav {
-		@include span-columns(9);
+	.topnav {
+		/*position: absolute;*/
+		/*right: 0;*/
+		/*top:0;*/
 	}
 
-	.block--islandora-solr {
-		@include span-columns(3);
+	.simpleSearch {
+		margin-top: $small-spacing;
 	}
 
-	.menu {
-		li {
-			display: inline-block;
-			padding-right: 1em;
+	@include media($large-screen) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-			a {
-				font-family: $sans-serif;
-				color: #333;
-				font-weight: 100;
-				font-size: 1rem;
-					transition: border-bottom 400ms ease;
-					border-bottom: 2px solid transparent;
-				&:hover {
-				
-				
-					border-bottom: 2px solid $red;
-				}
-			}
+		.site-branding {
+			width: 30em;
+		}
+
+		.topnav {
+			flex-grow: 2;
+			margin: $base-spacing;
+		}
+
+		.simpleSearch {
+			width: 20em;
 		}
 	}
 }

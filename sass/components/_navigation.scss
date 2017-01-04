@@ -1,0 +1,30 @@
+
+//top menu styles
+.topnav {
+	@include clearfix;
+
+	.menu {
+		float: right;
+		li {
+			display: inline-block;
+			padding-right: 1em;
+
+			a {
+				font-family: $sans-serif;
+				color: #333;
+				font-weight: 100;
+				font-size: 1rem;
+				transition: border-bottom 400ms ease;
+				border-bottom: 2px solid transparent;
+
+				&:hover {
+					border-bottom: 2px solid $red;
+				}
+			}
+
+			li {
+				display: block;
+			}
+		}
+	}
+}

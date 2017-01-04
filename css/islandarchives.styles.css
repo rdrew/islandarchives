@@ -370,7 +370,7 @@ body {
   line-height: 1.5;
   background: #fffef2; }
 
-h1, .site-branding__name,
+h1,
 h2,
 h3,
 h4,
@@ -381,7 +381,7 @@ h6 {
   line-height: 1.2;
   margin: 0 0 0.75rem; }
 
-h1, .site-branding__name {
+h1 {
   font-weight: 400;
   /*margin-top: 4rem;*/
   margin-top: 1.5rem;
@@ -453,7 +453,7 @@ hr {
   text-shadow: initial;
   background-position: initial; }
 
-.page-islandora-object h1, .page-islandora-object .site-branding__name {
+.page-islandora-object h1 {
   margin: 1rem 0; }
 
 .page-islandora-object .breadcrumb {
@@ -467,17 +467,34 @@ hr {
 .islandora-basic-collection-display-switch a:link {
   color: #333; }
 
+.l-branding {
+  width: 100%  !important; }
+
 .site-branding__logo {
   float: left;
-  margin-right: 1em; }
+  margin-right: 0.75rem; }
   .site-branding__logo img {
-    width: 60px; }
+    width: 40px; }
+    @media screen and (min-width: 600px) {
+      .site-branding__logo img {
+        width: 60px; } }
 
 .site-branding__name {
-  color: #333; }
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1; }
+  @media screen and (min-width: 600px) {
+    .site-branding__name {
+      font-size: 3.2rem; } }
+  .site-branding__name a {
+    color: #333; }
 
 .site-branding__slogan {
-  margin: 0; }
+  margin: 0;
+  font-size: 1.5rem; }
+  @media screen and (min-width: 600px) {
+    .site-branding__slogan {
+      font-size: 2.1rem; } }
 
 .breadcrumb a {
   font-family: Roboto;
@@ -596,7 +613,7 @@ hr {
     height: 2.5em;
     margin-bottom: 1.2em;
     opacity: 0.2; }
-  .grid-items-lines .grid-item h1, .grid-items-lines .grid-item .site-branding__name {
+  .grid-items-lines .grid-item h1 {
     color: #333;
     font-size: 1.3em;
     margin-bottom: 0.4em; }
@@ -657,11 +674,13 @@ hr {
 .footer-links .title {
   margin-bottom: .5rem; }
 
-.l-region--navigation {
-  margin-top: 0.75rem;
-  transition: all 400ms ease; }
+.logged-in .navbar {
+  top: 57px; }
+  @media screen and (min-width: 900px) {
+    .logged-in .navbar {
+      top: 28px; } }
 
-.navbar {
+header {
   background-color: rgba(255, 254, 242, 0.9);
   z-index: 998;
   position: fixed;
@@ -672,95 +691,96 @@ hr {
   /*height: 200px;*/
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
   padding-bottom: .5rem; }
-  .navbar .site-branding__logo img {
-    height: 77px;
-    width: auto; }
-  .navbar.sticky {
+  header .site-branding__logo img {
+    /*width: 60px;*/ }
+  header.sticky {
     /*height: 100px;*/ }
-    .navbar.sticky .l-region--navigation {
+    header.sticky .l-region--navigation {
       margin: 0;
       transition: all 400ms ease; }
-    .navbar.sticky .site-branding__logo img {
+    header.sticky .site-branding__logo img {
       transition: all 400ms ease;
-      height: 50px;
-      width: auto; }
-    .navbar.sticky a.site-branding__name {
+      width: 40px; }
+    header.sticky a.site-branding__name {
       transition: all 400ms ease;
       font-size: 1.9em; }
-    .navbar.sticky h2.site-branding__slogan {
+    header.sticky h2.site-branding__slogan {
       transition: all 400ms ease;
       font-size: 1.5em; }
 
-.logged-in .navbar {
-  top: 28px; }
+.topnav {
+  /*position: relative;*/
+  /*top:0;*/ }
+
+.topnav span {
+  /*font-size: 3em;*/
+  /*line-height: 1;*/
+  float: right; }
+
+.sf-accordion-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+.sf-accordion-toggle span {
+  display: none; }
+
+.sf-accordion-toggle a {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 2em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; }
+  .sf-accordion-toggle a:before {
+    content: "\f0c9"; }
+
+ul#superfish-1-accordion {
+  width: 204px;
+  float: right;
+  background: #fff;
+  padding: .5em;
+  border: 1px solid #ccc; }
 
 .container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0 1em; }
-  .container::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .container .logo_block {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%; }
-    .container .logo_block:last-child {
-      margin-right: 0; }
-  .container .l-region--navigation {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 57.35098%; }
-    .container .l-region--navigation:last-child {
-      margin-right: 0; }
-
-.l-region--navigation {
-  padding: 0.75rem 0;
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .l-region--navigation::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .l-region--navigation nav {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%; }
-    .l-region--navigation nav:last-child {
-      margin-right: 0; }
-  .l-region--navigation .block--islandora-solr {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    .l-region--navigation .block--islandora-solr:last-child {
-      margin-right: 0; }
-  .l-region--navigation .menu li {
-    display: inline-block;
-    padding-right: 1em; }
-    .l-region--navigation .menu li a {
-      font-family: Roboto;
-      color: #333;
-      font-weight: 100;
-      font-size: 1rem;
-      transition: border-bottom 400ms ease;
-      border-bottom: 2px solid transparent; }
-      .l-region--navigation .menu li a:hover {
-        border-bottom: 2px solid #8c2004; }
+  .container > div {
+    outline: 1px solid red; }
+  .container .site-branding {
+    /*width: 20em;*/
+    /*position:absolute;*/ }
+    .container .site-branding::after {
+      clear: both;
+      content: "";
+      display: block; }
+  .container .topnav {
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top:0;*/ }
+  .container .simpleSearch {
+    margin-top: 0.75rem; }
+  @media screen and (min-width: 900px) {
+    .container {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-align: center;
+          align-items: center; }
+      .container .site-branding {
+        width: 30em; }
+      .container .topnav {
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+        margin: 1.5rem; }
+      .container .simpleSearch {
+        width: 20em; } }
 
 .hero {
   /*margin-top: 135px;*/
   -ms-flex-align: center;
       align-items: center;
   /*this image is from http://freestock.ca/canada_g92-pei_coastal_scenery__hdr_p1910.html and is ok for no commercial use*/
-  background-image: url("../images/photo_1910_20120525.jpg");
+  background-image: url("../images/photo_1910_20120525_v1.jpg");
   background-position: right;
   background-size: none;
   display: -ms-flexbox;
@@ -783,7 +803,7 @@ hr {
     box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.42);
     max-width: 33em;
     text-align: center; }
-    .hero .hero-content h1, .hero .hero-content .site-branding__name {
+    .hero .hero-content h1 {
       margin: 0 0 0.75rem 0; }
     .hero .hero-content p {
       margin: 0; }
@@ -851,6 +871,28 @@ dl.islandora-metadata-fields {
 .islandora-metadata dt.first,
 .islandora-metadata dd.first {
   border-top: 0; }
+
+.topnav::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+.topnav .menu {
+  float: right; }
+  .topnav .menu li {
+    display: inline-block;
+    padding-right: 1em; }
+    .topnav .menu li a {
+      font-family: Roboto;
+      color: #333;
+      font-weight: 100;
+      font-size: 1rem;
+      transition: border-bottom 400ms ease;
+      border-bottom: 2px solid transparent; }
+      .topnav .menu li a:hover {
+        border-bottom: 2px solid #8c2004; }
+    .topnav .menu li li {
+      display: block; }
 
 ul.pager {
   /*$base-border-color: gainsboro !default;*/
@@ -961,8 +1003,5 @@ aside nav + nav {
     text-transform: uppercase;
     font-size: .7em;
     font-weight: 200; }
-
-.l-branding {
-  width: 100%  !important; }
 
 /*# sourceMappingURL=islandarchives.styles.css.map */

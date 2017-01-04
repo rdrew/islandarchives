@@ -1,16 +1,46 @@
-.site-branding__logo {
-	img {
-		width: 60px;	
-	}
-	float: left;
-	margin-right: 1em;
-		
-}
-.site-branding__name {
-	//margin-bottom: 1em;
-color: $base-font-color; 
+.site-branding__name {}
+
+.l-branding {
+	width: 100%  !important;
 }
 
-.site-branding__slogan {
-	margin: 0;
+//site branding style and layout
+.site-branding {
+	&__logo {
+		float: left;
+		margin-right: $small-spacing;
+
+		img {
+			width: 40px;
+
+			@include media($medium-screen) {
+				width: 60px;
+			}
+		}
+	}
+
+	&__name {
+		//margin-bottom: 1em;
+		margin: 0;
+		font-size: 1.9rem;
+		line-height: 1;
+
+		@include media($medium-screen) {
+			font-size: 3.2rem;
+		}
+
+
+		a {
+			color: $base-font-color;
+		}
+	}
+
+	&__slogan {
+		margin: 0;
+		font-size: 1.5rem;
+
+		@include media($medium-screen) {
+			font-size: 2.1rem;
+		}
+	}
 }
