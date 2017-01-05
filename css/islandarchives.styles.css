@@ -680,7 +680,7 @@ hr {
     .logged-in .navbar {
       top: 28px; } }
 
-header {
+.navbar {
   background-color: rgba(255, 254, 242, 0.9);
   z-index: 998;
   position: fixed;
@@ -691,20 +691,24 @@ header {
   /*height: 200px;*/
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
   padding-bottom: .5rem; }
-  header .site-branding__logo img {
+  .navbar .site-branding__logo img {
     /*width: 60px;*/ }
-  header.sticky {
+  .navbar.sticky {
     /*height: 100px;*/ }
-    header.sticky .l-region--navigation {
+    @media screen and (min-width: 600px) {
+      .navbar.sticky .simpleSearch, .navbar.sticky .topnav {
+        margin: 0;
+        transition: all 400ms ease; } }
+    .navbar.sticky .l-region--navigation {
       margin: 0;
       transition: all 400ms ease; }
-    header.sticky .site-branding__logo img {
+    .navbar.sticky .site-branding__logo img {
       transition: all 400ms ease;
       width: 40px; }
-    header.sticky a.site-branding__name {
+    .navbar.sticky a.site-branding__name {
       transition: all 400ms ease;
       font-size: 1.9em; }
-    header.sticky h2.site-branding__slogan {
+    .navbar.sticky h2.site-branding__slogan {
       transition: all 400ms ease;
       font-size: 1.5em; }
 
@@ -745,35 +749,39 @@ ul#superfish-1-accordion {
   padding: 0 1em; }
   .container > div {
     /*outline: 1px solid red;*/ }
-  .container .site-branding {
-    /*width: 20em;*/
-    /*position:absolute;*/ }
-    .container .site-branding::after {
-      clear: both;
-      content: "";
-      display: block; }
-  .container .topnav {
-    /*position: absolute;*/
-    /*right: 0;*/
-    /*top:0;*/ }
-  .container .simpleSearch {
-    margin-top: 0.75rem; }
-  @media screen and (min-width: 900px) {
-    .container {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-      -ms-flex-align: center;
-          align-items: center; }
-      .container .site-branding {
-        width: 30em; }
-      .container .topnav {
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-        margin: 1.5rem; }
-      .container .simpleSearch {
-        width: 20em; } }
+
+.simpleSearch {
+  margin-top: 0.75rem; }
+
+.site-branding::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+@media screen and (min-width: 600px) {
+  .site-branding {
+    width: 25rem;
+    float: left; }
+  .topnav, .simpleSearch {
+    float: right;
+    width: 20rem; } }
+
+@media screen and (min-width: 900px) {
+  .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; }
+  .site-branding {
+    width: 30em; }
+  .topnav {
+    -ms-flex-positive: 2;
+        flex-grow: 2;
+    margin: 1.5rem; }
+  .simpleSearch {
+    width: 20em; } }
 
 .hero {
   /*margin-top: 135px;*/
@@ -879,20 +887,48 @@ dl.islandora-metadata-fields {
 
 .topnav .menu {
   float: right; }
-  .topnav .menu li {
-    display: inline-block;
-    padding-right: 1em; }
-    .topnav .menu li a {
-      font-family: Roboto;
-      color: #333;
-      font-weight: 100;
-      font-size: 1rem;
-      transition: border-bottom 400ms ease;
-      border-bottom: 2px solid transparent; }
-      .topnav .menu li a:hover {
-        border-bottom: 2px solid #8c2004; }
-    .topnav .menu li li {
-      display: block; }
+
+.topnav .menu li {
+  /*float: right;*/
+  display: inline-block;
+  margin-right: 1.5rem;
+  /*padding-right: 1em;*/ }
+
+.topnav .menu li a {
+  /*float: right;*/
+  display: inline-block;
+  padding: 0.75rem;
+  font-family: Roboto;
+  color: #333;
+  font-weight: 100;
+  font-size: 1rem;
+  /*transition: border-bottom 400ms ease;*/
+  /*border-bottom: 2px solid transparent;*/ }
+  .topnav .menu li a:hover {
+    /*border-bottom: 2px solid $red;*/ }
+
+.topnav .menu > li a {
+  border: 1px solid transparent; }
+
+.topnav .menu > li.sf-no-children > a {
+  border-bottom: 2px solid transparent; }
+  .topnav .menu > li.sf-no-children > a:hover {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #8c2004; }
+
+.topnav .menu > li.sfHover > a {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #fff; }
+
+/*need to fix this shit*/
+.sf-menu li:hover > ul, .sf-menu li.sfHover > ul {
+  background: #fff;
+  padding: .5em;
+  border: 1px solid #ccc;
+  border-top: 2px solid #8c2004;
+  top: 1.8em; }
 
 ul.pager {
   /*$base-border-color: gainsboro !default;*/

@@ -6,7 +6,7 @@
 	}
 }
 
-header {
+.navbar {
 	background-color: $header-background-color;
 
 	// {{{
@@ -26,26 +26,34 @@ header {
 	}
 
 	&.sticky {
-			 /*height: 100px;*/
+		/*height: 100px;*/
+
+		@include media($medium-screen) {
+			.simpleSearch, .topnav {
+				margin: 0;
+				transition: $base-transition;
+			}
+		}
+
 
 		.l-region--navigation {
-		margin: 0;
-		transition: $base-transition;
+			margin: 0;
+			transition: $base-transition;
 		}
 
 		.site-branding__logo img {
-		transition: $base-transition;
-		width: 40px;
+			transition: $base-transition;
+			width: 40px;
 		}
 
 		a.site-branding__name {
-		transition: $base-transition;
-		font-size: 1.9em;
+			transition: $base-transition;
+			font-size: 1.9em;
 		}
 
 		h2.site-branding__slogan {
-		transition: $base-transition;
-		font-size: 1.5em;
+			transition: $base-transition;
+			font-size: 1.5em;
 		}
 	}
 
@@ -72,9 +80,9 @@ header {
 .sf-accordion-toggle span {
 	display: none;
 }
+
 .sf-accordion-toggle a {
 	display: inline-block;
-
 	font: normal normal normal 14px/1 FontAwesome;
 	font-size: 2em;
 	text-rendering: auto;
@@ -96,43 +104,54 @@ ul#superfish-1-accordion {
 .container {
 	> div {
 		/*outline: 1px solid red;*/
+
 	}
 
 	padding: 0 1em;
+}
 
+.simpleSearch {
+	margin-top: $small-spacing;
+}
+
+.site-branding {
+	@include clearfix;
+}
+
+@include media($medium-screen) {
 	.site-branding {
-		/*width: 20em;*/
-
-		/*position:absolute;*/
-		@include clearfix;
+		width: 25rem;
+		float: left;
 	}
 
 	.topnav {
-		/*position: absolute;*/
-		/*right: 0;*/
-		/*top:0;*/
+		//margin-bottom: $small-spacing;
 	}
 
-	.simpleSearch {
-		margin-top: $small-spacing;
+	.topnav, .simpleSearch {
+		float: right;
+		width: 20rem;
 	}
+}
 
-	@include media($large-screen) {
+
+@include media($large-screen) {
+	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
 
-		.site-branding {
-			width: 30em;
-		}
+	.site-branding {
+		width: 30em;
+	}
 
-		.topnav {
-			flex-grow: 2;
-			margin: $base-spacing;
-		}
+	.topnav {
+		flex-grow: 2;
+		margin: $base-spacing;
+	}
 
-		.simpleSearch {
-			width: 20em;
-		}
+	.simpleSearch {
+		width: 20em;
 	}
 }
