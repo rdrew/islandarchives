@@ -1,6 +1,6 @@
-<div class="landingpage_new">
 
-  <body>
+<div<?php print $attributes; ?>>
+
 
   <header id="navbar" class="l-header navbar navbar-fixed-top" role="banner">
 
@@ -97,5 +97,4 @@ print render($simpleSearch['content']);
   <footer class="l-footer-wrapper" role="contentinfo">
   <?php print render($page['footer']); ?>
   </footer>
-  </body>
 </div>
