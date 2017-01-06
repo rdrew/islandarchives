@@ -13,6 +13,7 @@
   padding: 2em;
   background-color: $medium-gray;
 
+    background-size: cover;
   @include media($large-screen) {
   background-position: left -44px;
     background-size: cover;

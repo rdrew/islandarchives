@@ -475,7 +475,7 @@ hr {
   margin-right: 0.75rem; }
   .site-branding__logo img {
     width: 40px; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 900px) {
       .site-branding__logo img {
         width: 60px; } }
 
@@ -483,7 +483,7 @@ hr {
   margin: 0;
   font-size: 1.9rem;
   line-height: 1; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 900px) {
     .site-branding__name {
       font-size: 3.2rem; } }
   .site-branding__name a {
@@ -492,7 +492,7 @@ hr {
 .site-branding__slogan {
   margin: 0;
   font-size: 1.5rem; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 900px) {
     .site-branding__slogan {
       font-size: 2.1rem; } }
 
@@ -752,6 +752,9 @@ ul#superfish-1-accordion {
 
 .simpleSearch {
   margin-top: 0.75rem; }
+  @media screen and (min-width: 600px) {
+    .simpleSearch {
+      margin: 0; } }
 
 .site-branding::after {
   clear: both;
@@ -760,13 +763,21 @@ ul#superfish-1-accordion {
 
 @media screen and (min-width: 600px) {
   .site-branding {
-    width: 25rem;
+    width: 18rem;
     float: left; }
-  .topnav, .simpleSearch {
-    float: right;
-    width: 20rem; } }
+  .topnav {
+    width: 300px;
+    float: right; }
+  .simpleSearch {
+    width: 267px;
+    float: right; } }
 
 @media screen and (min-width: 900px) {
+  .site-branding {
+    width: 30em;
+    width: 50%; } }
+
+@media screen and (min-width: 1140px) {
   .container {
     display: -ms-flexbox;
     display: flex;
@@ -775,13 +786,14 @@ ul#superfish-1-accordion {
     -ms-flex-align: center;
         align-items: center; }
   .site-branding {
-    width: 30em; }
+    -ms-flex: none;
+        flex: none; }
   .topnav {
     -ms-flex-positive: 2;
         flex-grow: 2;
     margin: 1.5rem; }
   .simpleSearch {
-    width: 20em; } }
+    /*width: 27em;*/ } }
 
 .hero {
   /*margin-top: 135px;*/
@@ -797,7 +809,8 @@ ul#superfish-1-accordion {
       justify-content: center;
   min-height: 25em;
   padding: 2em;
-  background-color: #999; }
+  background-color: #999;
+  background-size: cover; }
   @media screen and (min-width: 900px) {
     .hero {
       background-position: left -44px;
@@ -893,6 +906,8 @@ dl.islandora-metadata-fields {
   display: inline-block;
   margin-right: 1.5rem;
   /*padding-right: 1em;*/ }
+  .topnav .menu li.last {
+    margin-right: 0; }
 
 .topnav .menu li a {
   /*float: right;*/

@@ -104,7 +104,6 @@ ul#superfish-1-accordion {
 .container {
 	> div {
 		/*outline: 1px solid red;*/
-
 	}
 
 	padding: 0 1em;
@@ -112,6 +111,10 @@ ul#superfish-1-accordion {
 
 .simpleSearch {
 	margin-top: $small-spacing;
+
+	@include media($medium-screen) {
+		margin: 0;
+	}
 }
 
 .site-branding {
@@ -120,22 +123,32 @@ ul#superfish-1-accordion {
 
 @include media($medium-screen) {
 	.site-branding {
-		width: 25rem;
+		width: 18rem;
 		float: left;
 	}
 
 	.topnav {
-		//margin-bottom: $small-spacing;
+		width: 300px;
+		float: right;
 	}
 
-	.topnav, .simpleSearch {
+	.simpleSearch {
+		width: 267px;
 		float: right;
-		width: 20rem;
 	}
+
 }
 
 
 @include media($large-screen) {
+	.site-branding {
+		width: 30em;
+		width: 50%;
+	}
+}
+
+
+@include media($desktop) {
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -143,7 +156,7 @@ ul#superfish-1-accordion {
 	}
 
 	.site-branding {
-		width: 30em;
+		flex: none;
 	}
 
 	.topnav {
@@ -152,6 +165,6 @@ ul#superfish-1-accordion {
 	}
 
 	.simpleSearch {
-		width: 20em;
+		/*width: 27em;*/
 	}
 }

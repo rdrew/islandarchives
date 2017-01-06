@@ -12,6 +12,10 @@
 	display: inline-block;
 	margin-right: $base-spacing;
 
+	&.last {
+		margin-right: 0;
+	}
+
 	/*padding-right: 1em;*/
 }
 
