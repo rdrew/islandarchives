@@ -1,3 +1,51 @@
+.container {
+	padding: 0 1em;
+
+	> div {
+		outline: 1px solid red;
+	}
+
+	@include media($desktop) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+/*logo*/
+.site-branding {
+	width: 19rem;
+	float: left;
+@include clearfix;
+	@include media($medium-screen) {
+		width: 30em;
+	}
+
+
+	@include media($desktop) {
+		flex: none;
+	}
+}
+
+.topnav {
+	float: right;
+
+	@include media($desktop) {
+		flex-grow: 2;
+		margin: $base-spacing;
+	}
+}
+
+.simpleSearch {
+	clear: both;
+
+	@include media($medium-screen) {
+		width: 267px;
+		float: right;
+		clear: right;
+	}
+}
+
 .logged-in .navbar {
 	top: 57px;
 
@@ -57,17 +105,10 @@
 		}
 	}
 
-	// }}}
 }
 
-.topnav {
-	/*position: relative;*/
-	/*top:0;*/
-}
 
 .topnav span {
-	/*font-size: 3em;*/
-	/*line-height: 1;*/
 	float: right;
 }
 
@@ -101,70 +142,3 @@ ul#superfish-1-accordion {
 	border: 1px solid #ccc;
 }
 
-.container {
-	> div {
-		/*outline: 1px solid red;*/
-	}
-
-	padding: 0 1em;
-}
-
-.simpleSearch {
-	margin-top: $small-spacing;
-
-	@include media($medium-screen) {
-		margin: 0;
-	}
-}
-
-.site-branding {
-	@include clearfix;
-}
-
-@include media($medium-screen) {
-	.site-branding {
-		width: 18rem;
-		float: left;
-	}
-
-	.topnav {
-		width: 300px;
-		float: right;
-	}
-
-	.simpleSearch {
-		width: 267px;
-		float: right;
-	}
-
-}
-
-
-@include media($large-screen) {
-	.site-branding {
-		width: 30em;
-		width: 50%;
-	}
-}
-
-
-@include media($desktop) {
-	.container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.site-branding {
-		flex: none;
-	}
-
-	.topnav {
-		flex-grow: 2;
-		margin: $base-spacing;
-	}
-
-	.simpleSearch {
-		/*width: 27em;*/
-	}
-}

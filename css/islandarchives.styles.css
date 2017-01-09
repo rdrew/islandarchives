@@ -5,6 +5,33 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+.node__content a:link, .islandora-basic-collection-grid a:link, .node__content a:visited, .islandora-basic-collection-grid a:visited {
+  color: inherit; }
+
+.node__content a:link, .islandora-basic-collection-grid a:link {
+  text-decoration: none;
+  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+  background-position: 0% 93%, 100% 93%, 0% 93%; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .node__content a:link, .islandora-basic-collection-grid a:link {
+    background-position-y: 87%, 87%, 87%; } }
+
+.node__content a:link::-moz-selection, .islandora-basic-collection-grid a:link::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+.node__content a:link::selection, .islandora-basic-collection-grid a:link::selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+.node__content a:link::-moz-selection, .islandora-basic-collection-grid a:link::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
 /*// {{{
  *this is copies from tufte.css font set (et-book)
  */
@@ -334,6 +361,63 @@ picture {
   margin: 0;
   max-width: 100%; }
 
+.node__content img {
+  border: 1px solid #ccc;
+  padding: 4px;
+  background: #fff; }
+
+/*----------------------------------------------*/
+/*-  these may be too much crap in this file   -*/
+/*----------------------------------------------*/
+.media {
+  margin-top: 15px; }
+
+.media:first-child {
+  margin-top: 0; }
+
+.media,
+.media-body {
+  zoom: 1;
+  overflow: hidden; }
+
+.media-body {
+  width: 10000px; }
+
+.media-object {
+  display: block; }
+
+.media-object.img-thumbnail {
+  max-width: none; }
+
+.media-right,
+.media > .pull-right {
+  padding-left: 10px; }
+
+.media-left,
+.media > .pull-left {
+  padding-right: 10px; }
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%; }
+
+.media-middle {
+  vertical-align: middle; }
+
+.media-bottom {
+  vertical-align: bottom; }
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+.media-list {
+  padding-left: 0;
+  list-style: none; }
+
 table {
   border-collapse: collapse;
   margin: 0.75rem 0;
@@ -440,12 +524,11 @@ hr {
 .pageTitle {
   margin-top: 1.5rem; }
 
-.l-main {
-  /* Links: replicate underline that clears descenders */
-  /*@extend %nice_underline;*/ }
+.node__content {
+  /* Links: replicate underline that clears descenders */ }
 
 .normal_link, .l-main a.contextual-links-trigger:link,
-.l-main ul.contextual-links a:link, .islandora-basic-collection-display-switch a:link, .islandora-basic-collection-grid a:link {
+.l-main ul.contextual-links a:link, .islandora-basic-collection-display-switch a:link {
   text-decoration: initial;
   background: initial;
   background-size: initial;
@@ -501,6 +584,9 @@ hr {
   text-transform: uppercase;
   font-size: .7em; }
 
+.islandora-basic-collection-grid {
+  font-size: .8em; }
+
 /*
     Document   : islandora_basic_collection.base.css
     Created on : May 23, 2012, 11:22:04 AM
@@ -537,10 +623,11 @@ hr {
     border-radius: 3px;
     box-shadow: inset 0 0 1px #adad97;
     display: block;
-    -ms-flex: 2 2 15em;
-        flex: 2 2 15em;
+    -ms-flex: 2 2 12em;
+        flex: 2 2 12em;
     margin: 0.75rem;
-    padding: 2em 2em 1em 2em;
+    /*padding: 2em 2em 1em 2em;*/
+    padding: 1em;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     border-top: 6px solid #999; }
@@ -548,7 +635,7 @@ hr {
       background-color: rgba(153, 153, 153, 0.1); }
     .flex-boxes .flex-box img {
       display: block;
-      height: 8em;
+      /*height: 8em;*/
       margin: 0 auto 1em; }
     .flex-boxes .flex-box .flex-title {
       font-size: 1.2em;
@@ -674,6 +761,51 @@ hr {
 .footer-links .title {
   margin-bottom: .5rem; }
 
+.container {
+  padding: 0 1em; }
+  .container > div {
+    outline: 1px solid red; }
+  @media screen and (min-width: 1140px) {
+    .container {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-align: center;
+          align-items: center; } }
+
+/*logo*/
+.site-branding {
+  width: 19rem;
+  float: left; }
+  .site-branding::after {
+    clear: both;
+    content: "";
+    display: block; }
+  @media screen and (min-width: 600px) {
+    .site-branding {
+      width: 30em; } }
+  @media screen and (min-width: 1140px) {
+    .site-branding {
+      -ms-flex: none;
+          flex: none; } }
+
+.topnav {
+  float: right; }
+  @media screen and (min-width: 1140px) {
+    .topnav {
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+      margin: 1.5rem; } }
+
+.simpleSearch {
+  clear: both; }
+  @media screen and (min-width: 600px) {
+    .simpleSearch {
+      width: 267px;
+      float: right;
+      clear: right; } }
+
 .logged-in .navbar {
   top: 57px; }
   @media screen and (min-width: 900px) {
@@ -712,13 +844,7 @@ hr {
       transition: all 400ms ease;
       font-size: 1.5em; }
 
-.topnav {
-  /*position: relative;*/
-  /*top:0;*/ }
-
 .topnav span {
-  /*font-size: 3em;*/
-  /*line-height: 1;*/
   float: right; }
 
 .sf-accordion-toggle {
@@ -744,56 +870,6 @@ ul#superfish-1-accordion {
   background: #fff;
   padding: .5em;
   border: 1px solid #ccc; }
-
-.container {
-  padding: 0 1em; }
-  .container > div {
-    /*outline: 1px solid red;*/ }
-
-.simpleSearch {
-  margin-top: 0.75rem; }
-  @media screen and (min-width: 600px) {
-    .simpleSearch {
-      margin: 0; } }
-
-.site-branding::after {
-  clear: both;
-  content: "";
-  display: block; }
-
-@media screen and (min-width: 600px) {
-  .site-branding {
-    width: 18rem;
-    float: left; }
-  .topnav {
-    width: 300px;
-    float: right; }
-  .simpleSearch {
-    width: 267px;
-    float: right; } }
-
-@media screen and (min-width: 900px) {
-  .site-branding {
-    width: 30em;
-    width: 50%; } }
-
-@media screen and (min-width: 1140px) {
-  .container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center; }
-  .site-branding {
-    -ms-flex: none;
-        flex: none; }
-  .topnav {
-    -ms-flex-positive: 2;
-        flex-grow: 2;
-    margin: 1.5rem; }
-  .simpleSearch {
-    /*width: 27em;*/ } }
 
 .hero {
   /*margin-top: 135px;*/
@@ -977,6 +1053,54 @@ ul.pager {
   .pager__item--next i, .pager__item--last i {
     margin-left: 4px; }
 
+.pull-quote > p:first-of-type::before, .pull-quote > p:last-of-type::after {
+  color: #cdcdcd;
+  display: inline-block;
+  font-size: 2.8125rem;
+  font-weight: bold;
+  line-height: 0;
+  max-width: 1.25rem; }
+
+.pull-quote {
+  border: 0;
+  margin: 2rem 0 1rem;
+  padding-left: 2rem;
+  padding-right: 1.25rem;
+  position: relative; }
+
+@media (min-width: 768px) {
+  .pull-quote {
+    margin: 1.5rem 0 1.5rem; } }
+
+.pull-quote > p {
+  font-size: 1.4375rem;
+  font-style: normal;
+  margin: 0; }
+
+.pull-quote > p:first-of-type::before {
+  content: '\201C\2002';
+  margin-left: -1.5rem;
+  margin-right: .25rem; }
+
+.pull-quote > p:last-of-type {
+  margin-bottom: 0; }
+
+.pull-quote > p:last-of-type::after {
+  content: '\2002\201E';
+  margin-left: .5rem; }
+
+.pull-quote__citation {
+  display: inline-block;
+  /*font-size: 1.25rem;*/
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 0;
+  width: 100%;
+  border: 0;
+  padding-left: 2rem;
+  padding-right: 1.25rem;
+  position: relative; }
+
 .islandora-solr-simple-search-form,
 form.search-block-form {
   position: relative; }
@@ -1046,7 +1170,8 @@ aside nav + nav {
 .tabs {
   border: 1px solid #adad97;
   border-width: 1px 0;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  background: #fff; }
   .tabs li {
     display: inline-block;
     margin-right: 0.75rem;

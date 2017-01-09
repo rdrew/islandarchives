@@ -100,9 +100,9 @@ hr {
 .pageTitle {
 margin-top: $base-spacing;
 }
-.l-main {
+.node__content {
   /* Links: replicate underline that clears descenders */
-  /*@extend %nice_underline;*/
+  @extend %nice_underline;
 }
 .normal_link {
 	text-decoration: initial;
@@ -116,3 +116,4 @@ margin-top: $base-spacing;
 .l-main ul.contextual-links a:link {
 	@extend .normal_link;
 }
+
