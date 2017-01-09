@@ -5,33 +5,6 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.node__content a:link, .islandora-basic-collection-grid a:link, .node__content a:visited, .islandora-basic-collection-grid a:visited {
-  color: inherit; }
-
-.node__content a:link, .islandora-basic-collection-grid a:link {
-  text-decoration: none;
-  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-  background-position: 0% 93%, 100% 93%, 0% 93%; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .node__content a:link, .islandora-basic-collection-grid a:link {
-    background-position-y: 87%, 87%, 87%; } }
-
-.node__content a:link::-moz-selection, .islandora-basic-collection-grid a:link::-moz-selection {
-  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-  background: #b4d5fe; }
-
-.node__content a:link::selection, .islandora-basic-collection-grid a:link::selection {
-  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-  background: #b4d5fe; }
-
-.node__content a:link::-moz-selection, .islandora-basic-collection-grid a:link::-moz-selection {
-  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-  background: #b4d5fe; }
-
 /*// {{{
  *this is copies from tufte.css font set (et-book)
  */
@@ -240,17 +213,11 @@ html {
   margin-bottom: 3rem; }
 
 /* Sidebars */
-.l-region--sidebar-first,
-.l-region--sidebar-second {
-  padding: 1.5rem; }
-
 /* Footer */
 .l-footer-wrapper {
   padding: 1.5rem 0; }
 
 @media screen and (min-width: 600px) {
-  .l-constrained, .l-region--navigation, .l-region--highlighted, .l-region--footer {
-    width: 90%; }
   /* Header */
   .l-branding {
     float: left;
@@ -294,16 +261,18 @@ html {
 
 @media screen and (min-width: 900px) {
   .l-constrained, .l-region--navigation, .l-region--highlighted, .l-region--footer {
-    width: 80%; }
+    max-width: 1100px; }
   /* Sidebars */
   .one-sidebar .l-content {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 74.41059%; }
+    width: 74.41059%;
+    padding-right: 1.5rem; }
     .one-sidebar .l-content:last-child {
       margin-right: 0; }
   .one-sidebar .l-region--sidebar-first {
+    margin-top: 1.5rem;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -446,11 +415,12 @@ html {
   box-sizing: inherit; }
 
 html {
-  font-size: 15px; }
+  font-size: 14px; }
 
 body {
   color: #333;
   font-family: et-book;
+  font-size: 1.4rem;
   line-height: 1.5;
   background: #fffef2; }
 
@@ -470,7 +440,7 @@ h1 {
   /*margin-top: 4rem;*/
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  font-size: 3.2rem;
+  font-size: 3rem;
   line-height: 1; }
 
 h2 {
@@ -478,7 +448,7 @@ h2 {
   font-weight: 400;
   margin-top: 2.1rem;
   margin-bottom: 0.75rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1; }
 
 h3 {
@@ -527,8 +497,7 @@ hr {
 .node__content {
   /* Links: replicate underline that clears descenders */ }
 
-.normal_link, .l-main a.contextual-links-trigger:link,
-.l-main ul.contextual-links a:link, .islandora-basic-collection-display-switch a:link {
+.normal_link, .islandora-basic-collection-display-switch a:link {
   text-decoration: initial;
   background: initial;
   background-size: initial;
@@ -560,41 +529,29 @@ hr {
     width: 40px; }
     @media screen and (min-width: 900px) {
       .site-branding__logo img {
-        width: 60px; } }
+        width: 48px; } }
 
 .site-branding__name {
   margin: 0;
   font-size: 1.9rem;
-  line-height: 1; }
+  line-height: .7; }
   @media screen and (min-width: 900px) {
     .site-branding__name {
-      font-size: 3.2rem; } }
+      font-size: 3rem; } }
   .site-branding__name a {
     color: #333; }
 
 .site-branding__slogan {
-  margin: 0;
-  font-size: 1.5rem; }
+  margin: 0; }
   @media screen and (min-width: 900px) {
     .site-branding__slogan {
-      font-size: 2.1rem; } }
+      font-size: 2rem; } }
 
 .breadcrumb a {
   font-family: Roboto;
   text-transform: uppercase;
-  font-size: .7em; }
+  font-size: .7rem; }
 
-.islandora-basic-collection-grid {
-  font-size: .8em; }
-
-/*
-    Document   : islandora_basic_collection.base.css
-    Created on : May 23, 2012, 11:22:04 AM
-    Description: Base css, for structural layout,
-    positioning, and to generally make things function in
-    the most basic form.
-*/
-/* List - Displays lists using a dt on the left and dd on the right */
 .islandora-basic-collection-display-switch {
   float: right; }
 
@@ -638,8 +595,7 @@ hr {
       /*height: 8em;*/
       margin: 0 auto 1em; }
     .flex-boxes .flex-box .flex-title {
-      font-size: 1.2em;
-      margin-bottom: 0.5em; }
+      font-size: 1em; }
     .flex-boxes .flex-box p {
       color: rgba(51, 51, 51, 0.6);
       line-height: 1.5em;
@@ -764,7 +720,7 @@ hr {
 .container {
   padding: 0 1em; }
   .container > div {
-    outline: 1px solid red; }
+    /*outline: 1px solid red;*/ }
   @media screen and (min-width: 1140px) {
     .container {
       display: -ms-flexbox;
@@ -842,7 +798,7 @@ hr {
       font-size: 1.9em; }
     .navbar.sticky h2.site-branding__slogan {
       transition: all 400ms ease;
-      font-size: 1.5em; }
+      font-size: 1.5rem; }
 
 .topnav span {
   float: right; }
@@ -1113,9 +1069,9 @@ form.search-block-form {
     border: 1px solid #adad97;
     box-sizing: border-box;
     display: block;
-    font-size: 1em;
-    font-style: italic;
+    font-size: 1rem;
     margin: 0;
+    font-family: Roboto;
     padding: 0.5rem 0.5rem;
     position: relative;
     transition: border-color;
@@ -1125,7 +1081,7 @@ form.search-block-form {
   form.search-block-form input[type=submit] {
     font-family: "Fontawesome";
     color: #5C8727;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     background: none;
     position: absolute;
     top: 0;

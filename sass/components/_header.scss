@@ -2,7 +2,7 @@
 	padding: 0 1em;
 
 	> div {
-		outline: 1px solid red;
+		/*outline: 1px solid red;*/
 	}
 
 	@include media($desktop) {
@@ -101,7 +101,7 @@
 
 		h2.site-branding__slogan {
 			transition: $base-transition;
-			font-size: 1.5em;
+			font-size: 1.5rem;
 		}
 	}
 

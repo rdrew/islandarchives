@@ -2,14 +2,14 @@
 @import "../libraries/neat/app/assets/stylesheets/neat";
 
 html {
-	font-size: 15px;
+	font-size: 14px;
 }
 
 body {
 	color: $base-font-color;
 	font-family: $base-font-family;
 
-	//font-size: $base-font-size;
+	font-size: 1.4rem;
 	line-height: $base-line-height;
 	background: $base-background-color;
 }
@@ -33,7 +33,7 @@ h1 {
 	/*margin-top: 4rem;*/
 	margin-top: $base-spacing;
 	margin-bottom: 1.5rem;
-	font-size: 3.2rem;
+	font-size: 3rem;
 	line-height: 1;
 }
 
@@ -42,7 +42,7 @@ h2 {
 	font-weight: 400;
 	margin-top: 2.1rem;
 	margin-bottom: $small-spacing;
-	font-size: 2.2rem;
+	font-size: 2rem;
 	line-height: 1;
 }
 
@@ -102,7 +102,7 @@ margin-top: $base-spacing;
 }
 .node__content {
   /* Links: replicate underline that clears descenders */
-  @extend %nice_underline;
+  //@extend %nice_underline;
 }
 .normal_link {
 	text-decoration: initial;
@@ -112,8 +112,7 @@ margin-top: $base-spacing;
 	text-shadow: initial;
 	background-position: initial;
 }
-.l-main a.contextual-links-trigger:link,
-.l-main ul.contextual-links a:link {
-	@extend .normal_link;
-}
-
+//.l-main a.contextual-links-trigger:link,
+//.l-main ul.contextual-links a:link {
+	//@extend .normal_link;
+//}

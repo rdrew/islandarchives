@@ -20,9 +20,9 @@ form.search-block-form {
 		border: 1px solid $base-border-color;
 		box-sizing: border-box;
 		display: block;
-		font-size: 1em;
-		font-style: italic;
+		font-size: 1rem;
 		margin: 0;
+    font-family: $sans-serif;
 		padding: ($base-spacing / 3) ($base-spacing / 3);
 		position: relative;
 		transition: border-color;
@@ -34,7 +34,7 @@ form.search-block-form {
 		font-family: "Fontawesome";
 		//color: #333;
 		color: $green;
-		font-size: 1.2em;
+		font-size: 1.2rem;
 		background: none;
 		@include position(absolute, 0 0 0 null);
 

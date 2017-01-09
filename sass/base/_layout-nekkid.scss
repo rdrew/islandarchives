@@ -79,7 +79,7 @@ body {
 /* Sidebars */
 .l-region--sidebar-first,
 .l-region--sidebar-second {
-	padding: $base-spacing;
+	//padding: $base-spacing;
 }
 
 /* Footer */
@@ -93,7 +93,7 @@ body {
 
 @include media($medium-screen) {
 	.l-constrained {
-		width: 90%;
+		//width: 90%;
 	}
 
 	/* Header */
@@ -130,16 +130,19 @@ body {
 
 @include media($large-screen) {
 	.l-constrained {
-		width: 80%;
+		//width: 80%;
+    max-width: 1100px;
 	}
 
 	/* Sidebars */
 	.one-sidebar {
 		.l-content {
 			@include span-columns(9);
+      padding-right: $base-spacing;
 		}
 
 		.l-region--sidebar-first {
+      margin-top: $base-spacing;
 			@include span-columns(3);
 
 			@include omega();
