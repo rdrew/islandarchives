@@ -1,0 +1,33 @@
+aside .block {
+
+	@extend %box;
+
+
+
+	h2, .block__title {
+		margin-top: 0;
+		border-bottom: 3px solid $green;
+		line-height: .7;
+		margin-top: 10px;
+	}
+
+	ul a {
+		font-family: $sans-serif;
+		font-size: .7em;
+		font-weight: 200;
+	}
+	& + .block {
+	
+		margin-top: $base-spacing;
+	
+	}
+}
+
+.block__title {
+	margin-top: 0;
+	.fa {
+		/*float: left;*/
+		font-size:.8em;
+		margin-right: 5px;
+	}
+}

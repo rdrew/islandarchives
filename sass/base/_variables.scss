@@ -72,8 +72,8 @@ $base-font-color: $dark-gray;
 $action-color: $green;
 
 // Border
-//$base-border-color: $light-gray;
-$base-border-color: #adad97;
+$base-border-color: $light-gray;
+/*$base-border-color: #adad97;*/
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
@@ -89,3 +89,14 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 $base-duration: 400ms;
 $base-timing: ease;
 $base-transition: all $base-duration $base-timing;
+
+
+
+%box {
+
+	background-color: #fff;
+	border: $base-border;
+	padding: $small-spacing;
+	border-radius: $base-border-radius;
+
+}
