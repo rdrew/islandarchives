@@ -1,5 +1,27 @@
 (function($) {
 
+	Drupal.behaviors.solr_plus_minus = {
+		attach: function (context, settings) {
+
+			var target = 'a.plus';
+			var replacement = '<i class="fa fa-search-plus" aria-hidden="true"></i>';
+
+			$(target, context).once(function() {
+				$(this).empty();
+				$(this).append(replacement);
+			});
+
+			var target = 'a.minus';
+			var replacement = '<i class="fa fa-search-minus" aria-hidden="true"></i>';
+
+			$(target, context).once(function() {
+				$(this).empty();
+				$(this).append(replacement);
+			});
+
+
+		}
+	};
 	//Drupal.behaviors.frontpage_tiles = {
 		//attach: function(context, settings) {
 
