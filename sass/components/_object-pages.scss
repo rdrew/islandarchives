@@ -1,0 +1,19 @@
+.islandora-large-image-content-wrapper {
+	#clip {
+	display:none;
+	}
+	@include outer-container(100%);
+	.islandora-large-image-content {
+		@include span-columns(8);
+		
+	}
+	.image_info {
+		
+		@include span-columns(4);
+		h2 {
+		margin-top: 0;
+		}
+		
+	}
+	
+}

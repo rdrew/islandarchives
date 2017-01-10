@@ -1,40 +1,27 @@
 aside nav.block {
-	background-color: #fff;
-	border: $base-border;
-	padding: $small-spacing;
-h2,	.block__title {
-	margin-top: 0;
-	border-bottom: 3px solid $green;
-	    line-height: .7;
-		    margin-top: 10px;
-	}
-	ul a {
-		font-family: $sans-serif;
-		font-size: .7em;
-	
-		font-weight: 200;
-	
-	}
-
-
-
 }
+
 aside nav div + div {
-margin-bottom: $base-spacing;
+	margin-bottom: $base-spacing;
 }
+
 aside nav + nav {
-margin-top: $base-spacing;
+	margin-top: $base-spacing;
 }
 
 .menu li > ul {
-margin-left: $small-spacing;
+	margin-left: $small-spacing;
 }
 
 .all-link a {
 	@extend button;
+
 	font-family: $sans-serif;
 	text-transform: uppercase;
 	font-size: .8rem;
 	font-weight: 400;
-	
+	margin: 0 auto;
+	display: block;
+	width: 220px;
+	margin-top: $base-spacing;
 }
