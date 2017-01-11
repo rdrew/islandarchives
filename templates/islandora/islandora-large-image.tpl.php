@@ -31,19 +31,22 @@
         <?php print $islandora_content; ?>
       </div>
     <?php endif; ?>
+    <aside class="image_info">
+      <?php print $description; ?>
+
+      <?php if ($parent_collections): ?>
+        <div class="parent_collections">
+          <h2><?php print t('In collections'); ?></h2>
+          <ul>
+            <?php foreach ($parent_collections as $collection): ?>
+          <li><?php print l($collection->label, "islandora/object/{$collection->id}"); ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      <?php endif; ?>
+    </aside>
   </div>
   <div class="islandora-large-image-metadata">
-    <?php print $description; ?>
-    <?php if ($parent_collections): ?>
-      <div>
-        <h2><?php print t('In collections'); ?></h2>
-        <ul>
-          <?php foreach ($parent_collections as $collection): ?>
-        <li><?php print l($collection->label, "islandora/object/{$collection->id}"); ?></li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
-    <?php endif; ?>
     <?php print $metadata; ?>
   </div>
 </div>
