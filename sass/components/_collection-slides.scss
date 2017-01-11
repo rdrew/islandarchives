@@ -1,23 +1,54 @@
 .close-btn {
-@extend button;
-text-transform: uppercase;
-float: right;
+	@extend button;
+
+	text-transform: uppercase;
+	border-radius: 50%;
+	float: right;
+
+	@include position(absolute, $base-spacing $base-spacing null null);
+
+	line-height: .7;
 }
+
 .node_link a {
 	@extend button;
-	float: right;
-	
+
+	@include position(absolute, null $base-spacing $base-spacing null);
 }
 
 .collection-slide {
-	@include clearfix;
-	background-color: $tan;
-	box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
-	padding: $base-spacing;
-	&__title {
-display: inline-block;	
-		margin: 0;
-	
+	min-height: 350px;
+
+	section {
+		@include nice_links(#cfc5aa);
 	}
-	
+
+	h1 {
+		margin-bottom: $base-spacing;
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	position: relative;
+
+	@include clearfix;
+
+	background-color: $tan;
+	box-shadow: $inset-box-shadow;
+	padding: $base-spacing;
+
+	&__title {
+		/*display: inline-block;	*/
+		margin: 0;
+	}
+
+	&__image img {
+		@extend %image_box;
+
+		border-color: #9e9e9e;
+		float: left;
+		margin: 0 $small-spacing $small-spacing 0;
+	}
 }
