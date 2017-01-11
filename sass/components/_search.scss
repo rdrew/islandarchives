@@ -31,6 +31,7 @@ form.search-block-form {
 	}
 
 	input[type=submit] {
+		box-shadow:none;
 		font-family: "Fontawesome";
 		//color: #333;
 		color: $green;

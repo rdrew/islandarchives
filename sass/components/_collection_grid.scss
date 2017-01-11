@@ -5,10 +5,14 @@
 
 .islandora-basic-collection-display-switch {
   float: right;
+  position: absolute;
+  top:0;
+  right:0;
 }
 .islandora-basic-collection {
 	margin-top: $base-spacing;
 	
+	position:relative;
 }
 .flex-boxes {
   //$flex-box-border-color: $light-gray;
@@ -45,7 +49,10 @@
     flex: 2 2 $flex-box-width;
     margin: $flex-box-gutter;
     /*padding: 2em 2em 1em 2em;*/
-    padding: 1em;
+	a {
+		display: block;
+		padding: 1em ;
+	}
 
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -60,14 +67,19 @@
 		&:hover {
 		  //background-color: transparentize($color-from-list, 0.9);
 		  background-color: transparentize($flex-box-top-color, 0.9);
+		  /*.flex-title {*/
+			  /*@extend %nice_underline;*/
+		  /*}*/
 		}
       //}
     //}
 
     img {
       display: block;
-      /*height: 8em;*/
+	  height: 8em;
       margin: 0 auto 1em;
+	 @extend %box; 
+	 padding:2px;
       //opacity: 0.4;
     }
 

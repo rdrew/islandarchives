@@ -10,7 +10,7 @@
 	src: url("../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
 	src: url("../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
 	font-weight: normal;
-	font-style: normal
+	font-style: normal;
 }
 
 @font-face {
@@ -18,7 +18,7 @@
 	src: url("../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
 	src: url("../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
 	font-weight: normal;
-	font-style: italic
+	font-style: italic;
 }
 
 @font-face {
@@ -26,21 +26,25 @@
 	src: url("../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
 	src: url("../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
 	font-weight: bold;
-	font-style: normal
+	font-style: normal;
 }
-@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);// }}}
 
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);
+
+// }}}
 
 // Breakpoints
 $medium-screen: 600px;
 $large-screen: 900px;
-$desktop:1140px;
+$desktop: 1140px;
 
 // Typography
 $base-font-family: et-book;
 $heading-font-family: $base-font-family;
+
 //$heading-font-family: $font-stack-georgia;
 $sans-serif: Roboto;
+
 // Font Sizes
 $base-font-size: 1rem;
 
@@ -59,6 +63,7 @@ $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ccc;
+
 //$green: #5c8727;
 
 $red: #8c2004;
@@ -67,21 +72,26 @@ $green: #5C8727;
 $light-green: rgb(231, 237, 224);
 $yellow: #FBB040;
 $tan: rgb(207, 197, 170);
+
 // Font Colors
 $base-font-color: $dark-gray;
 $action-color: $green;
 
 // Border
 $base-border-color: $light-gray;
+
 /*$base-border-color: #adad97;*/
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
 $base-background-color: $parchment;
 $secondary-background-color: tint($base-border-color, 75%);
+
 /*$header-background-color: rgba(255,255,255,0.9);*/
 $header-background-color: rgba(255, 254, 242, 0.9);
+
 // Forms
+$inset-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
@@ -90,13 +100,16 @@ $base-duration: 400ms;
 $base-timing: ease;
 $base-transition: all $base-duration $base-timing;
 
-
-
 %box {
-
 	background-color: #fff;
 	border: $base-border;
 	padding: $small-spacing;
 	border-radius: $base-border-radius;
+}
 
+%image_box {
+	background-color: #fff;
+	border: $base-border;
+	padding: $small-spacing / 2;
+	border-radius: $base-border-radius;
 }
