@@ -512,7 +512,7 @@ hr {
   margin: 1.5rem 0; }
 
 .pageTitle {
-  margin-top: 1.5rem; }
+  margin-top: 0; }
 
 .node__content {
   /* Links: replicate underline that clears descenders */ }
