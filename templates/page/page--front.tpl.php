@@ -38,13 +38,13 @@ print render($simpleSearch['content']);
     </div>
   </header>
 
-  <?php print $messages; ?>
   <div class="hero">
     <div class="hero-content">
     <?php print render($page['content']); ?>
     </div>
   </div>
 
+  <?php print $messages; ?>
 <!--collection grid tiles-->
 <!--
   <div class="grid grid-items-lines">
