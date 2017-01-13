@@ -1,12 +1,9 @@
 .close-btn {
 	@extend button;
 
-	text-transform: uppercase;
-	border-radius: 50%;
-	float: right;
-
 	@include position(absolute, $base-spacing $base-spacing null null);
 
+	border-radius: 50%;
 	line-height: .7;
 }
 
@@ -23,8 +20,8 @@
 		@include nice_links(#cfc5aa);
 	}
 
-	h1 {
-		margin-bottom: $base-spacing;
+	&__title {
+		margin: 0 0 $small-spacing 0;
 	}
 
 	h2 {
@@ -41,7 +38,6 @@
 
 	&__title {
 		/*display: inline-block;	*/
-		margin: 0;
 	}
 
 	&__image img {
