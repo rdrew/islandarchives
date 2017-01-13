@@ -666,12 +666,10 @@ aside .block + .block {
   height: auto; }
 
 .close-btn {
-  text-transform: uppercase;
-  border-radius: 50%;
-  float: right;
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
+  border-radius: 50%;
   line-height: .7; }
 
 .node_link a {
@@ -706,8 +704,8 @@ aside .block + .block {
   .collection-slide section a:link::-moz-selection {
     text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
     background: #b4d5fe; }
-  .collection-slide h1 {
-    margin-bottom: 1.5rem; }
+  .collection-slide__title {
+    margin: 0 0 0.75rem 0; }
   .collection-slide h2 {
     margin-top: 0; }
   .collection-slide::after {
@@ -715,8 +713,7 @@ aside .block + .block {
     content: "";
     display: block; }
   .collection-slide__title {
-    /*display: inline-block;	*/
-    margin: 0; }
+    /*display: inline-block;	*/ }
   .collection-slide__image img {
     border-color: #9e9e9e;
     float: left;
