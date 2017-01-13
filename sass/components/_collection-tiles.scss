@@ -1,113 +1,138 @@
 .collection-tile {
 	&__title {
-	margin: 0;
+		margin: 0;
 	}
 }
 
-
-
-
-
 @mixin grid-item-columns($columns) {
-  width: 100% / 12 * $columns;
+	width: 100% / 12 * $columns;
 }
 
 .grid-items-lines {
-  $base-background-color: white !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: 40em !default;
-  $large-screen: 53.75em !default;
-  $base-font-color: $dark-gray !default;
-  $grid-items-background: $base-background-color;
-  $grid-item-background: $base-background-color;
-  $grid-item-border: 1px solid transparentize($base-font-color, 0.8);
-  $grid-item-columns: 3;
-  $grid-item-big-columns: 8;
-  $grid-item-color: $base-font-color;
-  $grid-item-height: 14em;
+	$base-background-color: white !default;
+	$dark-gray: #333 !default;
+	$light-gray: #DDD !default;
+	$medium-screen: 40em !default;
+	$large-screen: 53.75em !default;
+	$base-font-color: $dark-gray !default;
+	$grid-items-background: $base-background-color;
+	$grid-item-background: $base-background-color;
+	$grid-item-border: 1px solid transparentize($base-font-color, 0.8);
+	$grid-item-columns: 2;
+	$grid-item-big-columns: 8;
+	$grid-item-color: $base-font-color;
+	$grid-item-height: 14em;
 
-  @include clearfix;
+	@include clearfix;
 
-  position: relative;
+	position: relative;
 
-  .grid-item {
-    background: $grid-item-background;
-    border-bottom: $grid-item-border;
-    border-right: $grid-item-border;
-    cursor: pointer;
-    float: left;
-    height: $grid-item-height;
-    outline: none;
-    overflow: hidden;
-    /*padding: 2em;*/
-    padding: $base-spacing;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    width: 100%;
+	.grid-item {
+		background: $grid-item-background;
+		border-bottom: $grid-item-border;
+		border-right: $grid-item-border;
+		cursor: pointer;
+		float: left;
+		height: $grid-item-height;
+		outline: none;
+		overflow: hidden;
 
-    @include media($large-screen) {
-      @include grid-item-columns($grid-item-columns);
-    }
+		/*padding: 2em;*/
+		padding: $base-spacing;
+		text-decoration: none;
+		transition: all 0.2s ease-in-out;
+		width: 100%;
 
-
-    &:focus,
-    &:hover {
-      background: transparentize($grid-item-color, 0.95);
-    }
-  }
-
-  .grid-item img {
-    display: block;
-    height: 2.5em;
-    margin-bottom: 1.2em;
-    opacity: 0.2;
-  }
-
-  .grid-item h1 {
-    color: $grid-item-color;
-    font-size: 1.3em;
-    margin-bottom: 0.4em;
-  }
-
-  .grid-item p {
-    color: transparentize($grid-item-color, 0.4);
-    line-height: 1.5em;
-
-    @include media($medium-screen) {
-      /*max-width: 70%;*/
-    }
-  }
-
-  .grid-item-big {
-    @include media($large-screen) {
-      @include grid-item-columns($grid-item-big-columns);
-    }
+		@include media($large-screen) {
+			@include grid-item-columns($grid-item-columns);
+		}
 
 
-    p {
-      @include media($medium-screen) {
-        /*max-width: 60%;*/
-      }
-    }
-  }
+		&:focus,
+		&:hover {
+			//background: transparentize($grid-item-color, 0.95);
+	
+		}
+	}
 
-  // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
-  .bottom-cover {
-    background: $grid-items-background;
-    bottom: 0;
-    height: 3px;
-    position: absolute;
-    width: 100%;
-  }
+	.grid-item img {
+		display: block;
+		height: 2.5em;
+		margin-bottom: 1.2em;
+		opacity: 0.2;
+	}
 
-  .right-cover {
-    background: $grid-items-background;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    width: 4px;
-  }
+	.grid-item h1 {
+		color: $grid-item-color;
+		font-size: 1.3em;
+		margin-bottom: 0.4em;
+	}
+
+	.grid-item p {
+		color: transparentize($grid-item-color, 0.4);
+		line-height: 1.5em;
+
+		@include media($medium-screen) {
+			/*max-width: 70%;*/
+		}
+	}
+
+	.grid-item-big {
+		@include media($large-screen) {
+			@include grid-item-columns($grid-item-big-columns);
+		}
+
+
+		p {
+			@include media($medium-screen) {
+				/*max-width: 60%;*/
+			}
+		}
+	}
+
+	// this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
+	.bottom-cover {
+		background: $grid-items-background;
+		bottom: 0;
+		height: 3px;
+		position: absolute;
+		width: 100%;
+	}
+
+	.right-cover {
+		background: $grid-items-background;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		width: 4px;
+	}
 }
-.page-node-119 {
+
+@mixin frontpage_collection_grid {
+
+	.collection-grid {
+		$tile-images: (
+		//add the class and url here
+		island_imagined: "/sites/default/files/pei_map_2_0.jpeg", 
+		island_stories: "/sites/default/files/abouti-islandstories-icon_0.png", 
+		island_lives: "/sites/default/files/islandlives.png"
+
+		);
+
+		@each $class, $url in $tile-images {
+			.#{$class}.collection-tile {
+				background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url($url);
+
+				&:hover {
+					background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url($url);
+					> * {
+					
+						//background-color: rgba(255,255,255,.5);
+					
+					}
+				}
+			}
+		}
+	}
 }
+@include frontpage_collection_grid;
