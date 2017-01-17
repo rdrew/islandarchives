@@ -1,0 +1,33 @@
+
+@mixin header__search {
+	position: relative;
+
+	[type=text] {
+		appearance: none;
+		background-color: white;
+		border: 1px solid $base-border-color;
+		box-sizing: border-box;
+		display: block;
+		font-size: 1rem;
+		margin: 0;
+		font-family: $sans-serif;
+		padding: ($base-spacing / 3) ($base-spacing / 3);
+		position: relative;
+		transition: border-color;
+		width: 100%;
+		border-radius: 20px;
+	}
+
+	[type=submit] {
+		box-shadow: none;
+		font-family: "Fontawesome";
+		color: $green;
+		font-size: 1.2rem;
+		background: none;
+
+		@include position(absolute, 0 0 0 null);
+
+		outline: none;
+		padding: 5px 10px;
+	}
+}

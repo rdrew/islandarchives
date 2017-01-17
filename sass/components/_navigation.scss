@@ -1,25 +1,22 @@
 //top menu styles
-.topnav {
+.header__menu {
 	@include clearfix;
 }
 
-.topnav .menu {
+.header__menu__items {
 	float: right;
 }
 
-.topnav .menu li {
-	/*float: right;*/
+.header__menu__item {
 	display: inline-block;
 	margin-right: $base-spacing;
 
 	&.last {
 		margin-right: 0;
 	}
-
-	/*padding-right: 1em;*/
 }
 
-.topnav .menu li a {
+.header__menu__item__link {
 	/*float: right;*/
 	display: inline-block;
 	padding: $small-spacing;
@@ -36,12 +33,16 @@
 	}
 }
 
-.topnav .menu > li a {
+.header__menu__item .sf-depth-1 {
 	border: 1px solid transparent;
+	.sf-no-children .header__menu__item__link {
+	
+	}
 }
 
+
 //links without dropdown panel
-.topnav .menu > li.sf-no-children > a {
+.header__menu__items > .sf-no-children .header__menu__item__link {
 	border-bottom: 2px solid transparent;
 
 	&:hover {
@@ -52,17 +53,14 @@
 }
 
 //links with dropdown panel
-.topnav .menu > li.sfHover > a {
+.header__menu .menu > li.sfHover > a {
 	background: #fff;
 	border: 1px solid #ccc;
 	border-bottom: 1px solid #fff;
 }
 
-/*need to fix this shit*/
-ul {}
-
-//dropdown panel
-.sf-menu li:hover > ul, .sf-menu li.sfHover > ul {
+//dropdown
+.header__menu .header__menu__item.sfHover > ul {
 	background: #fff;
 	padding: .5em;
 	border: 1px solid #ccc;
@@ -70,6 +68,3 @@ ul {}
 	top: 1.8em;
 }
 
-.topnav .menu .sf-depth-1 {}
-
-.topnav .menu .sf-depth-1 .active-trail {}

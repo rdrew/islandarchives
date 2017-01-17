@@ -1,25 +1,26 @@
-.site-branding__name {}
+@mixin header__branding {
+	@include clearfix;
 
-.l-branding {
-	width: 100%  !important;
-}
-
-//site branding style and layout
-.site-branding {
-	&__logo {
+	//site branding style and layout
+	.header__branding__logo {
 		float: left;
 		margin-right: $small-spacing;
+		width: 40px;
 
-		img {
+		//mobile
+		@include media($large-screen) {
+			width: 48px;
+		}
+
+
+		//sticky header
+		@at-root .sticky .header__branding__logo {
+			transition: $base-transition;
 			width: 40px;
-
-			@include media($large-screen) {
-				width: 48px;
-			}
 		}
 	}
 
-	&__name {
+	.header__branding__name {
 		//margin-bottom: 1em;
 		margin: 0;
 		font-size: 1.9rem;
@@ -33,13 +34,24 @@
 		a {
 			color: $base-font-color;
 		}
+
+		//sticky header
+		@at-root .sticky .header__branding__name {
+			transition: $base-transition;
+			font-size: 1.9em;
+		}
 	}
 
-	&__slogan {
+	.header__branding__slogan {
 		margin: 0;
-		//font-size: 1.5rem;
-    //display:inline-block;
 
+		//sticky header
+		@at-root .sticky .header__branding__slogan {
+			transition: $base-transition;
+			font-size: 1.5rem;
+		}
+
+		//mobile
 		@include media($large-screen) {
 			font-size: 2rem;
 		}

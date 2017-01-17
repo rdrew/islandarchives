@@ -1,4 +1,32 @@
-.close-btn {
+.collection-slide {
+	min-height: 350px;
+	position: relative;
+
+	@include clearfix;
+
+	background-color: $tan;
+	box-shadow: $inset-box-shadow;
+	padding: $base-spacing;
+}
+
+.collection-slide__teaser {
+	@include nice_links(#cfc5aa);
+}
+
+.collection-slide__title {
+	margin: 0 0 $small-spacing 0;
+}
+
+//.collection-slide__logo,
+.collection-slide .field--name-field-collection-logo img {
+	@extend %image_box;
+
+	border-color: #9e9e9e;
+	float: left;
+	margin: 0 $small-spacing $small-spacing 0;
+}
+
+.collection-slide__close-button {
 	@extend button;
 
 	@include position(absolute, $base-spacing $base-spacing null null);
@@ -7,44 +35,8 @@
 	line-height: .7;
 }
 
-.node_link a {
+.collection-slide__node-link a {
 	@extend button;
 
 	@include position(absolute, null $base-spacing $base-spacing null);
-}
-
-.collection-slide {
-	min-height: 350px;
-
-	section {
-		@include nice_links(#cfc5aa);
-	}
-
-	&__title {
-		margin: 0 0 $small-spacing 0;
-	}
-
-	h2 {
-		margin-top: 0;
-	}
-
-	position: relative;
-
-	@include clearfix;
-
-	background-color: $tan;
-	box-shadow: $inset-box-shadow;
-	padding: $base-spacing;
-
-	&__title {
-		/*display: inline-block;	*/
-	}
-
-	&__image img {
-		@extend %image_box;
-
-		border-color: #9e9e9e;
-		float: left;
-		margin: 0 $small-spacing $small-spacing 0;
-	}
 }
