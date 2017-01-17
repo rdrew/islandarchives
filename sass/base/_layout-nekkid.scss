@@ -49,8 +49,15 @@ body {
 
 	}
 }/* Header */
-.l-region--header {
-	padding: $base-spacing 0;
+.logged-in .l-header {
+	top: 57px;
+
+	@include media($large-screen) {
+		top: 28px;
+	}
+}
+.l-header {
+	padding: $small-spacing 0;
 
 	.block {
 		float: right;
