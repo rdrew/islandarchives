@@ -24,15 +24,13 @@
  * @ingroup views_templates
  */
 ?>
-
-<?php foreach ($fields as $id => $field): ?>
-  <?php if (!empty($field->separator)): ?>
-    <?php print $field->separator; ?>
-  <?php endif; ?>
-
-  <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php print $field->content; ?>
-  <?php print $field->wrapper_suffix; ?>
-<?php endforeach; ?>
-
+<div class="collection-slide slide-pane <?php print $fields['field_project']->content; ?> " role="slide-panel" id="nid_<?php print $fields['nid']->content; ?>">
+    <?php print $fields['title']->content; ?>
+        <a class="collection-slide__close-button js-close-btn button" href="#">X</a>
+    <?php print $fields['field_collection_logo']->content; ?>
+    <section class="collection-slide__teaser">
+      <?php print $fields['body']->content; ?>
+    </section>
+    <?php print $fields['field_featured_image']->content; ?>
+    <?php print $fields['view_node']->content; ?>
+</div>

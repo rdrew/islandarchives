@@ -22,7 +22,7 @@
             $('[data-toggle=slide]').on('click', this._tile_clicked);
 
             // bind closing action to close button per item
-            $('.close-btn').on('click', this._close_detail);
+            $('.js-close-btn').on('click', this._close_detail);
 
             return this;
         },
