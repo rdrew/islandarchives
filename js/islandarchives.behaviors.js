@@ -29,7 +29,7 @@
     attach: function (context, settings) {
 
       $('#islandora-solr-result-count', context).once(function() {
-        $(this).appendTo($('.page-islandora-search h1'));
+        $(this).appendTo($('.page-islandora-search .pageTitle'));
       });
     }
   };

@@ -7,14 +7,14 @@
     <div class="container">
       <div class="site-branding header__branding">
         <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__branding__logo">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__branding__logo__wrapper-link">
+        <img class="header__branding__logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
         <?php endif; ?>
 
         <?php if ($site_name): ?>
-        <a href="<?php print $front_page; ?>" class="header__branding__name" title="<?php print t('Home'); ?>" rel="home">
-        <span><?php print $site_name; ?></span>
+        <a href="<?php print $front_page; ?>" class="header__branding__name__wrapper-link" title="<?php print t('Home'); ?>" rel="home">
+        <h1 class="header__branding__name"><?php print $site_name; ?></h1>
         </a>
         <?php endif; ?>
         <?php if ($site_slogan): ?>
