@@ -1,66 +1,86 @@
-ul.pager {
-	/*$base-border-color: gainsboro !default;*/
-	$pagination-border-color: $base-border-color;
-	$pagination-border: 1px solid $pagination-border-color;
-	/*$pagination-background: lighten($pagination-border-color, 10);*/
-	$pagination-background: $tan;
-	/*$pagination-hover-background: lighten($pagination-background, 10);*/
-	$pagination-hover-background: #fff;
-	$pagination-color: $base-font-color;
+.pager {
+  /*$base-border-color: gainsboro !default;*/
+  $pagination-border-color: $base-border-color;
+  $pagination-border: 1px solid $pagination-border-color;
 
-	//text-align: center;
-	//display: inline;
-	//margin: 0;
-	//padding: 0;
-	//text-align: center;
-	margin-bottom: $base-spacing;
+  /*$pagination-background: lighten($pagination-border-color, 10);*/
+  $pagination-background: $tan;
 
-	li {
-		background: $pagination-background;
-		font-family: $sans-serif;
-		text-transform: uppercase;
-		font-size: .7em;
-		font-weight: 100;
-		border-radius: $base-border-radius;
-		border: $pagination-border;
-		color: $pagination-color;
-		outline: none;
-		padding: ($base-spacing / 4) ($gutter / 2);
-		text-decoration: none;
-		transition: all 0.2s ease-in-out;
+  /*$pagination-hover-background: lighten($pagination-background, 10);*/
+  $pagination-hover-background: #fff;
+  $pagination-color: $base-font-color;
 
-		&:hover,
-		&:focus {
-			background: $pagination-hover-background;
-			/*color: $action-color;*/
-		}
+  $icon_padding: 4px;
 
-		&.pager__item--current {
-			background: $pagination-hover-background;
-		}
+  //text-align: center;
+  //display: inline;
+  //margin: 0;
+  //padding: 0;
+  //text-align: center;
+  margin-bottom: $base-spacing;
 
-		a {
-			color: $pagination-color;
-		}
-	}
+  &__item {
+    background: $pagination-background;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    font-size: .7em;
+    font-weight: 100;
+    border-radius: $base-border-radius;
+    border: $pagination-border;
+    color: $pagination-color;
+    outline: none;
+    padding: ($base-spacing / 4) ($gutter / 2);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background: $pagination-hover-background;
+
+      /*color: $action-color;*/
+    }
+
+    &.pager__item--current {
+      background: $pagination-hover-background;
+    }
+
+    &--first,
+    &--previous {
+      i {
+        margin-right: $icon_padding;
+      }
+    }
+
+    &--next,
+    &--last {
+      i {
+        margin-left: $icon_padding;
+      }
+    }
+
+    a {
+      color: $pagination-color;
+    }
+  }
 }
 
-.pager__item {
-	padding: 0;
+//.pager__item {}
 
-	$icon_padding: 4px;
+//.dataTables_paginate {
+  //@extend .pager;
+//}
 
-	&--first,
-	&--previous {
-		i {
-			margin-right: $icon_padding;
-		}
-	}
-
-	&--next,
-	&--last {
-		i {
-			margin-left: $icon_padding;
-		}
-	}
-}
+//.paginate {
+  //&_button,
+  //&_active {
+    //@extend .pager__item;
+    //&:hover,
+    //&:active {
+    
+    //}
+  //}
+//}
+//.paginate_button:hover {
+  //display: none;
+  
+//}
