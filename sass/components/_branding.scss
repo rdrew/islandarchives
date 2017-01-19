@@ -1,59 +1,71 @@
 @mixin header__branding {
-	@include clearfix;
+  $branding__name__size__desktop: 3rem;
+  $branding__name__size__mobile: 2.3rem;
 
-	//site branding style and layout
-	.header__branding__logo {
-		float: left;
-		margin-right: $small-spacing;
-		width: 40px;
+  $branding__slogan__size__desktop: 2rem;
+  $branding__slogan__size__mobile: 1.5rem;
 
-		//mobile
-		@include media($large-screen) {
-			width: 48px;
-		}
+  .header__branding {
+    @include clearfix;
+  }
 
+  //site branding style and layout
+  .header__branding__logo {
+    display: block;
+    float: left;
+    margin-right: $small-spacing;
+    width: 40px;
 
-		//sticky header
-		@at-root .sticky .header__branding__logo {
-			transition: $base-transition;
-			width: 40px;
-		}
-	}
-
-	.header__branding__name {
-		//margin-bottom: 1em;
-		margin: 0;
-		font-size: 1.9rem;
-		line-height: .7;
-
-		@include media($large-screen) {
-			font-size: 3rem;
-		}
+    //desktop
+    @include media($large-screen) {
+      width: 51px;
+    }
 
 
-		a {
-			color: $base-font-color;
-		}
+    //sticky header
+    @at-root .sticky .header__branding__logo {
+      transition: $base-transition;
+      width: 40px;
+    }
+  }
 
-		//sticky header
-		@at-root .sticky .header__branding__name {
-			transition: $base-transition;
-			font-size: 1.9em;
-		}
-	}
+  .header__branding__name {
+    //margin-bottom: 1em;
+    display: block;
+    margin: 0;
+    font-size: $branding__name__size__mobile;
+    line-height: .9;
 
-	.header__branding__slogan {
-		margin: 0;
+    @include media($large-screen) {
+    font-size: $branding__name__size__desktop;
+      margin-bottom: 3px;
+    }
 
-		//sticky header
-		@at-root .sticky .header__branding__slogan {
-			transition: $base-transition;
-			font-size: 1.5rem;
-		}
 
-		//mobile
-		@include media($large-screen) {
-			font-size: 2rem;
-		}
-	}
+    a {
+      color: $base-font-color;
+    }
+
+    //sticky header
+    @at-root .sticky .header__branding__name {
+      transition: $base-transition;
+    font-size: $branding__name__size__mobile;
+      margin-bottom: 0px;
+    }
+  }
+
+  .header__branding__slogan {
+    margin: 0;
+
+    //sticky header
+    @at-root .sticky .header__branding__slogan {
+      transition: $base-transition;
+      font-size: $branding__slogan__size__mobile;
+    }
+
+    //desktop
+    @include media($large-screen) {
+      font-size: $branding__slogan__size__desktop;
+    }
+  }
 }
