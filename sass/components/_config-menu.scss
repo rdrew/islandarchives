@@ -1,0 +1,159 @@
+.config-dropdown {
+  $dropdown-color: $base-font-color;
+  $dropdown-description-color: lighten($dropdown-color, 40%);
+  $dropdown-border: $base-border;
+  $dropdown-background: $base-background-color;
+  $dropdown-background-hover: darken($dropdown-background, 3%);
+  $dropdown-inner-border: 1px solid silver;
+  $dropdown-height: 40px;
+  $dropdown-padding: 1em;
+  $dropdown-distance-from-menu: 57px;
+  $dropdown-arrow-top-distance: 0;
+
+  line-height: $base-line-height;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+
+  &__button {
+    //background: $dropdown-background;
+    //border: $base-border;
+    //border-radius: $base-border-radius;
+    //border-bottom: $dropdown-border;
+    //border-bottom-right-radius: $base-border-radius;
+    //border-right: $dropdown-border;
+    //border-top: $dropdown-border;
+    //border-top-right-radius: $base-border-radius;
+    border: none;
+    box-shadow: none;
+    background: none;
+    color: $red;
+    cursor: pointer;
+    float: right;
+    .fa {
+    padding: 0 $small-spacing;
+      font-size: 1.1em !important;
+    }
+    line-height: $dropdown-height;
+    margin: 0;
+    //padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    padding: 4px;
+    position: relative;
+
+    @include media($large-screen) {
+      font-size: 1.2em;
+    padding: 4px;
+      //padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    }
+  }
+
+  &__button:hover {
+    background-color: $dropdown-background-hover;
+  }
+
+  //&__button::after {
+    //color: $base-font-color;
+    //content: "\25BE";
+    //display: block;
+    //position: absolute;
+    //right: $dropdown-padding;
+    //top: $dropdown-arrow-top-distance;
+  //}
+
+  &__menu {
+    background: $dropdown-background;
+    border: $dropdown-border;
+    border-radius: $base-border-radius;
+    box-shadow: 0 2px 2px transparentize(black, 0.8);
+    color: $dropdown-color;
+    cursor: pointer;
+    display: none;
+    margin: 0;
+    overflow: show;
+    padding: 0;
+    position: absolute;
+    right: -110px;
+    top: $dropdown-distance-from-menu;
+    transition: all 0.2s ease-in-out;
+    width: 228px;
+    z-index: 99999;
+
+    &::before {
+      @include position(absolute, 0 1em 0 0);
+
+      color: $dropdown-background;
+      content: "\25b2";
+      font-size: 1.4em;
+      pointer-events: none;
+      text-shadow: 0 -2px 2px transparentize(black, 0.7);
+      top: -1em;
+    }
+  }
+
+  &__menu__item,
+  &__menu li {
+    border-bottom: $dropdown-inner-border;
+    color: $dropdown-color;
+    list-style: none;
+    padding: $dropdown-padding / 2;
+
+    &:hover {
+      background: $dropdown-background-hover;
+    }
+
+    &:first-child {
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+    }
+
+    &:last-child {
+      border: 0;
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+
+  .show-menu {
+    display: block;
+  }
+}
+
+// Inspired by code by www.HUSAMUI.com
+
+/*----------*/
+/*-  html  -*/
+/*----------*/
+
+/*
+<div class="config-dropdown">
+  <div class="config-dropdown__container">
+    <p class="config-dropdown__description">Description</p>
+    <p class="config-dropdown__button js-config-dropdown__button">Click to Select</p>
+    <ul class="config-dropdown__menu dropdown-select">
+      <li>Dropdown Menu Item</li>
+      <li>Another Item</li>
+      <li>Item Three</li>
+      <li>The Last One</li>
+    </ul>
+  </div>
+</div>
+*/
+
+/*--------*/
+/*-  js  -*/
+/*--------*/
+
+/*
+$(document).ready(function() {
+  $(".js-config-dropdown__button").click(function() {
+    var $button, $menu;
+    $button = $(this);
+    $menu = $button.siblings(".config-dropdown__menu");
+    $menu.toggleClass("show-menu");
+    $menu.children("li").click(function() {
+      $menu.removeClass("show-menu");
+      $button.html($(this).html());
+    });
+  });
+});
+*/
