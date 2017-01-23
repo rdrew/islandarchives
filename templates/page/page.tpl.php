@@ -65,7 +65,9 @@ print render($simpleSearch['content']);
     <?php print render($title_suffix); ?>
     <?php print $messages; ?>
     <?php print render($page['help']); ?>
-    <?php print render($tabs); ?>
+    <div class="config-dropdown">
+      <?php print render($tabs); ?>
+    </div>
     <?php if ($action_links): ?>
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
