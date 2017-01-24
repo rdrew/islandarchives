@@ -1,3 +1,8 @@
+/*move to typograpy or layout partial*/
+.pageTitle {
+  display: inline-block;
+  
+}
 .config-dropdown {
   $dropdown-color: $base-font-color;
   $dropdown-description-color: lighten($dropdown-color, 40%);
@@ -31,18 +36,21 @@
     cursor: pointer;
     float: right;
     .fa {
-    padding: 0 $small-spacing;
+        transform: rotate(180deg);
+
+      padding: 0 $small-spacing/2;
       font-size: 1.1em !important;
     }
-    line-height: $dropdown-height;
+    line-height: 1;
     margin: 0;
+
     //padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
-    padding: 4px;
+    /*padding: 4px;*/
     position: relative;
 
     @include media($large-screen) {
       font-size: 1.2em;
-    padding: 4px;
+    /*padding: 4px;*/
       //padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
     }
   }
