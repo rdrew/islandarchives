@@ -54,7 +54,7 @@ print render($simpleSearch['content']);
 
 <!--main content-->
 <div class="l-main l-constrained">
-  <!--<?php print $breadcrumb; ?>-->
+  <?php print $breadcrumb; ?>
   <a id="main-content"></a>
 
   <div class="l-content" role="main">
@@ -62,12 +62,12 @@ print render($simpleSearch['content']);
     <?php if ($title): ?>
       <h1 class="pageTitle"><?php print $title; ?></h1>
     <?php endif; ?>
+      <?php print render($tabs); ?>
     <?php print render($title_suffix); ?>
     <?php print $messages; ?>
     <?php print render($page['help']); ?>
-    <div class="config-dropdown">
-      <?php print render($tabs); ?>
-    </div>
+
+
     <?php if ($action_links): ?>
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
