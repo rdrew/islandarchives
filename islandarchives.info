@@ -8,15 +8,15 @@ core = 7.x
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = css/islandarchives.reset.css
-stylesheets[all][] = css/islandarchives.styles.css
-stylesheets[all][] = css/crap_im_not_proud_of.styles.css
+stylesheets[all][] = build/css/islandarchives.reset.css
+stylesheets[all][] = build/css/islandarchives.styles.css
+stylesheets[all][] = build/css/crap_im_not_proud_of.styles.css
 
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = js/islandarchives.behaviors.js
-scripts[] = js/smoothScroll.js
+scripts[] = build/js/islandarchives.behaviors.js
+scripts[] = build/js/smoothScroll.js
 
 ; ========================================
 ; Regions

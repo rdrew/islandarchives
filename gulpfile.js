@@ -29,8 +29,8 @@ gulp.task('browser-sync', function() {
         //files: ["css/*.css"],
     });
     //gulp.watch("./sass/**/*.scss", ['sass:dev']).on('change', browserSync.reload);
-    gulp.watch("./sass/**/*.scss", ['sass:dev']);
-      gulp.watch("./css/**/*.css").on('change', browserSync.reload)
+    gulp.watch("./src/sass/**/*.scss", ['sass:dev']);
+      gulp.watch("./build/css/**/*.css").on('change', browserSync.reload)
 });
 
 gulp.task('templates', function() {
@@ -44,23 +44,23 @@ gulp.task('templates', function() {
 });
 
 gulp.task('sass:prod', function() {
-    gulp.src('./sass/**/*.scss')
+    gulp.src('./src/sass/**/*.scss')
         .pipe(sass(sass_config).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 version']
         }))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./build/css'));
 });
 
 gulp.task('sass:dev', function() {
-    gulp.src('./sass/*.scss')
+    gulp.src('./src/sass/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass(sass_config).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 version']
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./build/css'));
 });
 
 //gulp.task('sass:watch', function () {
