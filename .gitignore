@@ -7,3 +7,4 @@ github.php
 github.php.*
 
 *.swp
+.DS_Store
