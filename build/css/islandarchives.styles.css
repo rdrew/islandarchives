@@ -10,22 +10,22 @@ html {
  */
 @font-face {
   font-family: "et-book";
-  src: url("../../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
-  src: url("../../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("../../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("../../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("../../fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+  src: url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+  src: url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "et-book";
-  src: url("../../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-  src: url("../../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("../../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("../../fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+  src: url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+  src: url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: "et-book";
-  src: url("../../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-  src: url("../../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("../../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("../../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("../../fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+  src: url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+  src: url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("/sites/all/themes/islandarchives/fonts/et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
   font-weight: bold;
   font-style: normal; }
 
@@ -68,7 +68,8 @@ button,
   padding: 0.75rem;
   text-align: center;
   text-decoration: none;
-  transition: background-color 400ms ease;
+  -webkit-transition: background-color 400ms ease;
+          transition: background-color 400ms ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -139,7 +140,8 @@ textarea {
   box-sizing: border-box;
   margin-bottom: 0.75rem;
   padding: 0.5rem;
-  transition: border-color 400ms ease;
+  -webkit-transition: border-color 400ms ease;
+          transition: border-color 400ms ease;
   width: 100%; }
   [type='color']:hover, [type='date']:hover, [type='datetime']:hover, [type='datetime-local']:hover, [type='email']:hover, [type='month']:hover, [type='number']:hover, [type='password']:hover, [type='search']:hover, [type='tel']:hover, [type='text']:hover, [type='time']:hover, [type='url']:hover, [type='week']:hover, input:not([type]):hover, textarea:hover {
     border-color: #a3a3a3; }
@@ -506,7 +508,8 @@ code {
 a {
   color: #5C8727;
   text-decoration: none;
-  transition: color 400ms ease; }
+  -webkit-transition: color 400ms ease;
+          transition: color 400ms ease; }
   a:active, a:focus, a:hover {
     color: #45651d; }
 
@@ -582,15 +585,18 @@ aside .block + .block {
   position: relative; }
 
 .flex-boxes {
-  -ms-flex-align: stretch;
-      align-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   clear: both;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center; }
   .flex-boxes::after {
     clear: both;
@@ -604,12 +610,14 @@ aside .block + .block {
     /*box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken( white, 10%);*/
     border: 1px solid #ccc;
     display: block;
-    -ms-flex: 2 2 12em;
-        flex: 2 2 12em;
+    -webkit-box-flex: 2;
+        -ms-flex: 2 2 12em;
+            flex: 2 2 12em;
     margin: 0.75rem;
     /*padding: 2em 2em 1em 2em;*/
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
     border-top: 6px solid #999; }
     .flex-boxes .flex-box a {
       display: block;
@@ -631,8 +639,9 @@ aside .block + .block {
       line-height: 1.5em;
       margin: auto; }
   .flex-boxes .flex-box-big {
-    -ms-flex: 1 1 40em;
-        flex: 1 1 40em; }
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40em;
+            flex: 1 1 40em; }
 
 .field--name-field-collection-logo img {
   border: 1px solid #ccc;
@@ -659,6 +668,7 @@ aside .block + .block {
 
 .collection-slide__teaser a:link {
   text-decoration: none;
+  background: -webkit-linear-gradient(#cfc5aa, #cfc5aa), -webkit-linear-gradient(#cfc5aa, #cfc5aa), -webkit-linear-gradient(#333, #333);
   background: linear-gradient(#cfc5aa, #cfc5aa), linear-gradient(#cfc5aa, #cfc5aa), linear-gradient(#333, #333);
   background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-repeat: no-repeat, no-repeat, repeat-x;
@@ -722,7 +732,8 @@ aside .block + .block {
     /*padding: 2em;*/
     padding: 1.5rem;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
     width: 100%; }
     @media screen and (min-width: 900px) {
       .grid-items-lines .grid-item {
@@ -762,18 +773,24 @@ aside .block + .block {
     width: 4px; }
 
 .collection-grid .island_imagined.collection-tile {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url("/sites/default/files/pei_map_2_0.jpeg");
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url("/sites/default/files/pei_map_2_0.jpeg"); }
   .collection-grid .island_imagined.collection-tile:hover {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url("/sites/default/files/pei_map_2_0.jpeg");
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url("/sites/default/files/pei_map_2_0.jpeg"); }
 
 .collection-grid .island_stories.collection-tile {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url("/sites/default/files/abouti-islandstories-icon_0.png");
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url("/sites/default/files/abouti-islandstories-icon_0.png"); }
   .collection-grid .island_stories.collection-tile:hover {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url("/sites/default/files/abouti-islandstories-icon_0.png");
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url("/sites/default/files/abouti-islandstories-icon_0.png"); }
 
 .collection-grid .island_lives.collection-tile {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url("/sites/default/files/islandlives.png");
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url("/sites/default/files/islandlives.png"); }
   .collection-grid .island_lives.collection-tile:hover {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url("/sites/default/files/islandlives.png");
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%), url("/sites/default/files/islandlives.png"); }
 
 /*move to typograpy or layout partial*/
@@ -797,7 +814,8 @@ aside .block + .block {
     /*padding: 4px;*/
     position: relative; }
     .config-dropdown__button .fa {
-      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
       padding: 0 0.375rem;
       font-size: 1.1em !important; }
     @media screen and (min-width: 900px) {
@@ -820,7 +838,8 @@ aside .block + .block {
     position: absolute;
     right: -110px;
     top: 57px;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
     width: 228px;
     z-index: 99999; }
     .config-dropdown__menu::before {
@@ -1161,7 +1180,9 @@ table.dataTable td {
         color: #333333 !important;
         border: 1px solid #979797;
         background-color: white;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dcdcdc));
         /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
         /* Chrome10+,Safari5.1+ */
         /* FF3.6+ */
         /* IE10+ */
@@ -1176,7 +1197,9 @@ table.dataTable td {
         box-shadow: none; }
       .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
         background-color: #585858;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111111));
         /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #585858 0%, #111111 100%);
         /* Chrome10+,Safari5.1+ */
         /* FF3.6+ */
         /* IE10+ */
@@ -1186,7 +1209,9 @@ table.dataTable td {
       .dataTables_wrapper .dataTables_paginate .paginate_button:active {
         outline: none;
         background-color: #2b2b2b;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b2b2b), color-stop(100%, #0c0c0c));
         /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
         /* Chrome10+,Safari5.1+ */
         /* FF3.6+ */
         /* IE10+ */
@@ -1208,6 +1233,8 @@ table.dataTable td {
     text-align: center;
     font-size: 1.2em;
     background-color: white;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(25%, rgba(255, 255, 255, 0.9)), color-stop(75%, rgba(255, 255, 255, 0.9)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%); }
   .dataTables_wrapper .dataTables_length,
   .dataTables_wrapper .dataTables_filter,
@@ -1295,18 +1322,22 @@ table.dataTable td {
   top: 0;
   right: 0;
   width: 100%;
-  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+          transition: all 400ms ease;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5); }
   .header .container {
     padding: 0 1em; }
     @media screen and (min-width: 1140px) {
       .header .container {
+        display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-        -ms-flex-align: center;
-            align-items: center; } }
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
 
 .header__branding::after {
   clear: both;
@@ -1322,7 +1353,8 @@ table.dataTable td {
     .header__branding__logo {
       width: 51px; } }
   .sticky .header__branding__logo {
-    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+            transition: all 400ms ease;
     width: 40px; }
 
 .header__branding__name {
@@ -1337,14 +1369,16 @@ table.dataTable td {
   .header__branding__name a {
     color: #333; }
   .sticky .header__branding__name {
-    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+            transition: all 400ms ease;
     font-size: 2.3rem;
     margin-bottom: 0px; }
 
 .header__branding__slogan {
   margin: 0; }
   .sticky .header__branding__slogan {
-    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+            transition: all 400ms ease;
     font-size: 1.5rem; }
   @media screen and (min-width: 900px) {
     .header__branding__slogan {
@@ -1358,15 +1392,17 @@ table.dataTable td {
       width: 30em; } }
   @media screen and (min-width: 1140px) {
     .header__branding {
-      -ms-flex: none;
-          flex: none; } }
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none; } }
 
 .header__menu {
   float: right; }
   @media screen and (min-width: 1140px) {
     .header__menu {
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+      -webkit-box-flex: 2;
+          -ms-flex-positive: 2;
+              flex-grow: 2;
       margin-right: 1.5rem; } }
 
 .header__menu .sf-accordion-toggle {
@@ -1407,7 +1443,8 @@ table.dataTable td {
     font-family: Roboto;
     padding: 0.5rem 0.5rem;
     position: relative;
-    transition: border-color;
+    -webkit-transition: border-color;
+            transition: border-color;
     width: 100%;
     border-radius: 20px; }
   .header__search [type=submit] {
@@ -1422,6 +1459,8 @@ table.dataTable td {
     bottom: 0;
     outline: none;
     padding: 5px 10px; }
+  .header__search label {
+    display: none; }
   @media screen and (min-width: 600px) {
     .header__search {
       width: 267px;
@@ -1430,16 +1469,20 @@ table.dataTable td {
 
 .hero {
   /*margin-top: 135px;*/
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /*this image is from http://freestock.ca/canada_g92-pei_coastal_scenery__hdr_p1910.html and is ok for no commercial use*/
-  background-image: url("../../images/photo_1910_20120525_v1.jpg");
+  /*background-image: url("../../images/photo_1910_20120525_v1.jpg");*/
+  background-image: url("/sites/all/themes/islandarchives/images/photo_1910_20120525_v1.jpg");
   background-position: right;
   background-size: none;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 25em;
   padding: 2em;
   background-color: #999;
@@ -1448,8 +1491,9 @@ table.dataTable td {
     .hero {
       background-position: left -44px;
       background-size: cover;
-      -ms-flex-pack: end;
-          justify-content: flex-end; } }
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
   .hero .hero-content {
     padding: 0.75rem;
     margin-top: 8em;
@@ -1646,7 +1690,8 @@ dl.islandora-metadata-fields {
     outline: none;
     padding: 0.375rem 0.809em;
     text-decoration: none;
-    transition: all 0.2s ease-in-out; }
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out; }
     .pager__item:hover, .dataTables_wrapper .dataTables_paginate .paginate_active:hover, .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .pager__item:focus, .dataTables_wrapper .dataTables_paginate .paginate_active:focus, .dataTables_wrapper .dataTables_paginate .paginate_button:focus {
       background: #fff;
       /*color: $action-color;*/ }
@@ -1708,11 +1753,13 @@ dl.islandora-metadata-fields {
   position: relative; }
 
 .islandora-solr-facet li {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 4px;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .block ul.islandora-solr-facet {
   padding: 0 0 0 1em;
@@ -1736,6 +1783,7 @@ dl.islandora-metadata-fields {
   font-style: normal; }
 
 .page-islandora-search .pageTitle {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
@@ -1779,5 +1827,3 @@ aside nav + nav {
     text-transform: uppercase;
     font-size: .7em;
     font-weight: 200; }
-
-/*# sourceMappingURL=islandarchives.styles.css.map */
