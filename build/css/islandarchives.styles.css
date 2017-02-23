@@ -1,9 +1,38 @@
+/*@import "bourbon";*/
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,700,300italic,400italic,500italic,700italic);
 html {
   box-sizing: border-box; }
 
 *, *::after, *::before {
   box-sizing: inherit; }
+
+.node__content a:link, .node__content a:visited {
+  color: inherit; }
+
+.node__content a:link {
+  text-decoration: none;
+  background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
+  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+  background-position: 0% 93%, 100% 93%, 0% 93%; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .node__content a:link {
+    background-position-y: 87%, 87%, 87%; } }
+
+.node__content a:link::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+.node__content a:link::selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+.node__content a:link::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
 
 /*// {{{
  *this is copies from tufte.css font set (et-book)
@@ -442,6 +471,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+/*@import "neat";*/
 html {
   font-size: 14px; }
 
@@ -642,6 +672,23 @@ aside .block + .block {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 40em;
             flex: 1 1 40em; }
+
+.collection-menu__items, .collection-menu .menu {
+  border: 1px solid #ccc;
+  border-width: 1px 0;
+  margin-bottom: 1.5rem;
+  background: #fff; }
+
+.collection-menu__item, .collection-menu li {
+  display: inline-block;
+  margin-right: 0.75rem;
+  font-family: Roboto;
+  text-transform: uppercase;
+  font-size: .7em;
+  font-weight: 200; }
+
+.collection-menu__link, .collection-menu li a {
+  /*display: inline-block;*/ }
 
 .field--name-field-collection-logo img {
   border: 1px solid #ccc;
@@ -1375,7 +1422,8 @@ table.dataTable td {
     margin-bottom: 0px; }
 
 .header__branding__slogan {
-  margin: 0; }
+  margin: 0;
+  font-size: 1.5rem; }
   .sticky .header__branding__slogan {
     -webkit-transition: all 400ms ease;
             transition: all 400ms ease;

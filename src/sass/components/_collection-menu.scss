@@ -1,0 +1,38 @@
+.collection-menu { 
+  &__items {
+	border: $base-border;
+	border-width: 1px 0;
+	margin-bottom: $base-spacing;
+	background: #fff;
+  }
+  &__item {
+
+		display: inline-block;
+		margin-right: $small-spacing;
+		font-family: $sans-serif;
+		text-transform: uppercase;
+		font-size: .7em ;
+		font-weight: 200;
+  }
+  &__link {
+
+    /*display: inline-block;*/
+  }
+}
+
+
+
+
+//**********************
+//FUGLY STUFF BELOW  *
+//*********************
+
+.collection-menu .menu {
+  @extend .collection-menu__items;
+}
+.collection-menu li {
+  @extend .collection-menu__item;
+}
+.collection-menu li a {
+  @extend .collection-menu__link;
+}

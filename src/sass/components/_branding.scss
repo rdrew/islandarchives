@@ -37,7 +37,7 @@
     line-height: .9;
 
     @include media($large-screen) {
-    font-size: $branding__name__size__desktop;
+      font-size: $branding__name__size__desktop;
       margin-bottom: 3px;
     }
 
@@ -49,7 +49,7 @@
     //sticky header
     @at-root .sticky .header__branding__name {
       transition: $base-transition;
-    font-size: $branding__name__size__mobile;
+      font-size: $branding__name__size__mobile;
       margin-bottom: 0px;
     }
   }
@@ -57,6 +57,7 @@
   .header__branding__slogan {
     margin: 0;
 
+    font-size: $branding__slogan__size__mobile;
     //sticky header
     @at-root .sticky .header__branding__slogan {
       transition: $base-transition;

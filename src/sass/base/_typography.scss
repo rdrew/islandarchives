@@ -1,5 +1,8 @@
 //@import "neat/neat"; // or "neat" when in Rails
-@import "../../libraries/neat/app/assets/stylesheets/neat";
+@import "libraries/neat/app/assets/stylesheets/neat";
+@import "libraries/neat/app/assets/stylesheets/neat-helpers";
+/*@import "neat";*/
+
 
 html {
 	font-size: 14px;
@@ -102,7 +105,7 @@ margin-top: 0;
 }
 .node__content {
   /* Links: replicate underline that clears descenders */
-  //@extend %nice_underline;
+  @extend %nice_underline;
 }
 .normal_link {
 	text-decoration: initial;

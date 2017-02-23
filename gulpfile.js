@@ -8,15 +8,26 @@ var gulp = require("gulp"),
   importer = require('node-sass-globbing');
 
 
-var config = {
+//==================================================== 
+//change this stuff 
 
-  // CHANGE THIS!
-  remoteURL: "http://hp1.islandarchives.ca/",
-  themeName: "islandarchives",
+//name of the drupal theme:
+var _themeName = "islandarchives";
+
+//url of the remote site
+var _url = "http://hp1.islandarchives.ca/";
+
+//path to the themes assets (compiled css, js, imgs) dir
+var _path = "/sites/all/themes/islandarchives/build";
+
+//==================================================== 
+
+var config = {
+  remoteURL: _url,
   srcDir: "./src",
   injectDir: "./build",
-  //localPath: "/local-assets",
-  localPath: "/sites/all/themes/islandarchives/build",
+  //localPath: _path,
+  localPath: "/localpath",
 
   localAssets: {
     css: [
@@ -37,12 +48,14 @@ var sass_config = {
     //'node_modules/breakpoint-sass/stylesheets/',
     //'node_modules/singularitygs/stylesheets/',
     'node_modules/compass-mixins/lib/',
-    //'node_modules/bourbon/app/assets/stylesheets/',
-    //'node_modules/bourbon-neat/app/assets/stylesheets/'
+    'node_modules/bourbon/app/assets/stylesheets/',
+    'node_modules/bourbon-neat/app/assets/stylesheets/'
   ]
 
 
 };
+
+var targetCss = _themeName + ".styles.css";
 
 gulp.task("clean", function() {
   return del.sync(config.injectDir);
@@ -68,17 +81,20 @@ gulp.task("js", function() {
 });
 
 gulp.task("browserSync", ["sass", "js"], function() {
-  var targetCss = config.themeName;
+
+  //var _regex = new RegExp("@import.*" + targetCss + ".*;", "g");
+
+  var _regex = new RegExp("@import.*" + _path + ".*;", "g");
+
   browserSync.init({
     proxy: {
       target: config.remoteURL
     },
     rewriteRules: [
       {
-        match: /css\/islandarchives/g,
-        //match: targetCss,
+        match: _regex,
         fn: function (req, res, match) {
-          return 'null';
+          return '';
         }
 
 
@@ -97,7 +113,6 @@ gulp.task("browserSync", ["sass", "js"], function() {
 
             for (var file in files) {
               localCssAssets += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + config.localPath + "/" + files[file] + "\">";
-              //localCssAssets += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + config.localPath + "/" + config.themeName + "/" + files[file] + "\">";
             }
           }
 
