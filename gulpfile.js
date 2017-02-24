@@ -69,12 +69,11 @@ gulp.task("clean", function() {
   return del.sync(config.injectDir);
 });
 
-
 // ##################
-// Sass Task
+// Sass Development Task
 // ##################
 
-gulp.task("sass", function() {
+gulp.task("sass_dev", function() {
   return gulp.src(config.srcDir + "/sass/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass(sass_config).on("error", sass.logError))
@@ -84,6 +83,19 @@ gulp.task("sass", function() {
     .pipe(browserSync.stream());
 });
 
+// ##################
+// Sass Production Task
+// ##################
+
+gulp.task("sass_prod", function() {
+  return gulp.src(config.srcDir + "/sass/**/*.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass(sass_config).on("error", sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(config.injectDir + "/css"))
+    .pipe(browserSync.stream());
+});
 
 // ##################
 // Images Task
@@ -91,6 +103,7 @@ gulp.task("sass", function() {
 
 gulp.task('images', function() {
   return gulp.src(config.srcDir + '/img/**/*')
+  //pipe through image_min
     .pipe(imagemin())
     .pipe(gulp.dest(config.injectDir + '/img'))
 });
@@ -111,10 +124,9 @@ gulp.task("js", function() {
 // Browsersync Task
 // ##################
 
-gulp.task("browserSync", ["sass", "js"], function() {
+gulp.task("browserSync", ["sass_dev", "js"], function() {
 
-  //var _regex = new RegExp("@import.*" + targetCss + ".*;", "g");
-
+  //RegExp for finding and removing main css file rather that just override
   var _regex = new RegExp("@import.*" + _path + ".*;", "g");
 
   browserSync.init({
@@ -127,8 +139,6 @@ gulp.task("browserSync", ["sass", "js"], function() {
         fn: function (req, res, match) {
           return '';
         }
-
-
       },
 
       {
@@ -181,12 +191,11 @@ gulp.task("browserSync", ["sass", "js"], function() {
 // Watch Task
 // ##################
 
-gulp.task("watch", ["browserSync", "js", "images", "sass"], function() {
-  gulp.watch(config.srcDir + "/sass/**/*.scss", ["sass"]);
+gulp.task("watch", ["browserSync", "js", "images", "sass_dev"], function() {
+  gulp.watch(config.srcDir + "/sass/**/*.scss", ["sass_dev"]);
   gulp.watch(config.srcDir + "/img/**/*", ["images"]);
   gulp.watch(config.srcDir + "/js/**/*.js", ["js"]);
 });
-
 
 // ##################
 // Build Task
@@ -195,12 +204,11 @@ gulp.task("watch", ["browserSync", "js", "images", "sass"], function() {
 gulp.task("build", function() {
   runSequence([
     "clean",
-    "sass",
+    "sass_dev",
     "js",
     "images"
   ]);
 });
-
 
 // ##################
 // Default Task
