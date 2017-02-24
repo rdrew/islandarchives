@@ -1522,7 +1522,7 @@ table.dataTable td {
           align-items: center;
   /*this image is from http://freestock.ca/canada_g92-pei_coastal_scenery__hdr_p1910.html and is ok for no commercial use*/
   /*background-image: url("../../images/photo_1910_20120525_v1.jpg");*/
-  background-image: url("/sites/all/themes/islandarchives/images/photo_1910_20120525_v1.jpg");
+  background-image: url("/sites/all/themes/islandarchives/build/img/photo_1910_20120525_v1.jpg");
   background-position: right;
   background-size: none;
   display: -webkit-box;
@@ -1864,14 +1864,16 @@ aside nav + nav {
   margin-top: 1.5rem; }
 
 .tabs {
+  background: #fff;
   border: 1px solid #ccc;
   border-width: 1px 0;
-  margin-bottom: 1.5rem;
-  background: #fff; }
+  margin-bottom: 1.5rem; }
   .tabs li {
     display: inline-block;
-    margin-right: 0.75rem;
     font-family: Roboto;
-    text-transform: uppercase;
     font-size: .7em;
-    font-weight: 200; }
+    font-weight: 200;
+    margin-right: 0.75rem;
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=islandarchives.styles.css.map */

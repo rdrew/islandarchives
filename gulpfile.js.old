@@ -11,9 +11,9 @@ var gulp = require("gulp"),
   sassLint = require('gulp-sass-lint');
 
 
-//############################
-//Edit these paths and options
-//############################
+
+//==================================================== 
+//change this stuff 
 
 //name of the drupal theme:
 var _themeName = "islandarchives";
@@ -24,14 +24,14 @@ var _url = "http://hp1.islandarchives.ca/";
 //path to the themes assets (compiled css, js, imgs) dir
 var _path = "/sites/all/themes/islandarchives/build";
 
-//make sure the 2 Dirs are correct
+//==================================================== 
+
 var config = {
   remoteURL: _url,
   srcDir: "./src",
   injectDir: "./build",
   //localPath: _path,
-  //localPath: "/localpath",
-  localPath: "/build",
+  localPath: "/localpath",
 
   localAssets: {
     css: [
@@ -61,18 +61,21 @@ var sass_config = {
 
 var targetCss = _themeName + ".styles.css";
 
-// ##################
-// Clean Task
-// ##################
+/****************
+ *  gulp tasks  *
+ ****************/
+
+/*
+ *Clean Task
+ */
 
 gulp.task("clean", function() {
   return del.sync(config.injectDir);
 });
 
-
-// ##################
-// Sass Task
-// ##################
+/*
+ *Sass Task
+ */
 
 gulp.task("sass", function() {
   return gulp.src(config.srcDir + "/sass/**/*.scss")
@@ -84,10 +87,20 @@ gulp.task("sass", function() {
     .pipe(browserSync.stream());
 });
 
+/*
+ *Sass Linting Task
+ */
 
-// ##################
-// Images Task
-// ##################
+
+gulp.task("sass_lint", function() {
+  return gulp.src(config.srcDir + "/sass/**/*.scss")
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+});
+
+/*
+ *Images Task
+ */
 
 gulp.task('images', function() {
   return gulp.src(config.srcDir + '/img/**/*')
@@ -95,10 +108,9 @@ gulp.task('images', function() {
     .pipe(gulp.dest(config.injectDir + '/img'))
 });
 
-
-// ##################
-// JS Task
-// ##################
+/*
+ * JS Task
+ */
 
 gulp.task("js", function() {
   return gulp.src(config.srcDir + "/js/**/*.js")
@@ -106,15 +118,13 @@ gulp.task("js", function() {
     .pipe(browserSync.stream());
 });
 
-
-// ##################
-// Browsersync Task
-// ##################
+/*
+ *Browsersync Task
+ */
 
 gulp.task("browserSync", ["sass", "js"], function() {
 
-  //var _regex = new RegExp("@import.*" + targetCss + ".*;", "g");
-
+  //find and remove the remote css
   var _regex = new RegExp("@import.*" + _path + ".*;", "g");
 
   browserSync.init({
@@ -177,34 +187,42 @@ gulp.task("browserSync", ["sass", "js"], function() {
 });
 
 
-// ##################
-// Watch Task
-// ##################
+/*
+ *watch and lint sass task
+ */
+
+gulp.task("lint_watch", ["sass"], function() {
+  gulp.watch(config.srcdir + "/sass/**/*.scss", ["sass", "sass_lint"]);
+});
+
+/*
+ *watch task
+ */
 
 gulp.task("watch", ["browserSync", "js", "images", "sass"], function() {
-  gulp.watch(config.srcDir + "/sass/**/*.scss", ["sass"]);
-  gulp.watch(config.srcDir + "/img/**/*", ["images"]);
-  gulp.watch(config.srcDir + "/js/**/*.js", ["js"]);
+  gulp.watch(config.srcdir + "/sass/**/*.scss", ["sass"]);
+  gulp.watch(config.srcdir + "/img/**/*", ["images"]);
+  gulp.watch(config.srcdir + "/js/**/*.js", ["js"]);
 });
 
 
-// ##################
-// Build Task
-// ##################
+/*
+ *Build Task
+ */
 
 gulp.task("build", function() {
   runSequence([
     "clean",
+    //"sass_lint",
     "sass",
     "js",
     "images"
   ]);
 });
 
-
-// ##################
-// Default Task
-// ##################
+/*
+ * Default Task
+ */
 
 gulp.task("default", function() {
   runSequence(["build", "browserSync", "watch"]);
